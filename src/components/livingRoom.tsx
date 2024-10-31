@@ -36,7 +36,7 @@ const LivingRoom: React.FC = () => {
         <Carousel>
           <CarouselContent>
             {livingRoom?.map((card) => (
-              <CarouselItem className="basis-full md:basis-1/3" key={card.id}>
+              <CarouselItem className="basis-full sm:basis-1/2 md:basis-1/3" key={card.id}>
                 <div className="border p-3 shadow-md mb-2 rounded-lg hover:scale-[102%] transition translate duration-500 h-full flex flex-col">
                   <Image
                     src={card.imageUrl as string}

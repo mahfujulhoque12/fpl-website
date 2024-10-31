@@ -71,7 +71,7 @@ const Review: React.FC = () => {
         <Carousel className="mt-20">
           <CarouselContent className="">
             {cardData.map((card) => (
-              <CarouselItem key={card.id} className="basis-full md:basis-1/3">
+              <CarouselItem key={card.id} className="basis-full sm:basis-1/2 lg:basis-1/3">
                 <div
                   className="relative shadow-sm p-6 border rounded-lg hover:shadow-md transition-shadow duration-300 bg-cover bg-center bg-no-repeat mb-2"
                   style={{

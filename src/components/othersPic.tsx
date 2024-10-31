@@ -105,9 +105,9 @@ const OthersPic = () => {
         <Carousel>
         <CarouselContent>
           {cardData?.map((card)=>(
-              <CarouselItem className="basis-full md:basis-1/3">
+              <CarouselItem className="basis-full sm:basis-1/2 lg:basis-1/3">
               <div className="border p-4 shadow-md  mb-2 rounded-lg hover:scale-[102%] transition translate duration-500 h-full flex flex-col">
-                  <Image src={card.imageUrl as string} width={500} height={300 } alt="village" className="rounded-md h-[200px]"/>
+                  <Image src={card.imageUrl as string} width={700} height={300 } alt="village" className="rounded-md h-[200px] object-cover"/>
                   <p className="text-sm py-2">{card.des}</p>
   
                   <div className="flex  justify-start w-full">

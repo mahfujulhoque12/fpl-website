@@ -60,7 +60,7 @@ const InteriorDesignGallery = () => {
             furniture and decor, and let us support you every step of the way!
           </Paragraph>
         </div>
-        <div className="grid grid-cols-1 rounded-md sm:grid-cols-3 md:grid-cols-4 gap-4 p-4">
+        <div className="grid grid-cols-1 rounded-md sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-4 p-4">
           {designs.map((design, index) => (
             <InteriorDesignCard
               key={index}

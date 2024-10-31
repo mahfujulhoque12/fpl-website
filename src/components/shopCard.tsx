@@ -59,7 +59,7 @@ const ShopCard: React.FC = () => {
           decor, we have your back from start to finish.
         </Paragraph>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mt-5 mb-5 rounded-md">
+        <div className="grid grid-cols-1 sm:grid-cols-2  lg:grid-cols-3 xl:grid-cols-4 gap-5 mt-5 mb-5 rounded-md">
           {cardData.map((card) => (
             <div
               key={card.id}

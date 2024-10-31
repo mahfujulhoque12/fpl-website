@@ -105,7 +105,7 @@ const BlogContent = () => {
         <section className='py-10 bg-[#FCFDFF]'>
             <MaxWidthWrapper>
                 <SubHeading className="text-gray-700 font-bold uppercase text-center"> Our Stories </SubHeading>
-                <div className='grid grid-cols-1 md:grid-cols-2 gap-6 mt-8'>
+                <div className='grid grid-cols-1 lg:grid-cols-2 gap-6 mt-8'>
                     {
                         currentCards?.map((card) => (
                             <div className='p-6 rounded-xl bg-[#ffffff] border drop-shadow-md' key={card.id}>

@@ -75,7 +75,7 @@ const WhyClientChoseUs = () => {
                   
 
                     {/* Second Part */}
-                    <div className="grid grid-cols-1 md:grid-cols-4 mt-6 gap-2">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 mt-6 gap-2">
                         {cardData.map((card) => {
                             const count = useCounter(card.title);
                             return (

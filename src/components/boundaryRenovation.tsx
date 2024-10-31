@@ -38,7 +38,7 @@ const BoundaryRenovation: React.FC = () => {
         <Carousel>
         <CarouselContent>
           {boundaryData?.map((card)=>(
-              <CarouselItem className="basis-full md:basis-1/3">
+              <CarouselItem className="basis-full sm:basis-1/2 md:basis-1/3">
               <div className="border p-3 mb-2 shadow-md  rounded-lg hover:scale-[102%] transition translate duration-500  h-full flex flex-col">
                   <Image src={card.imageUrl as string} width={700} height={300} alt="village" className="rounded-md h-[200px] object-cover"/>
                   <h3 className=" text-gray-600 text-base font-semibold	 mt-3">{card.title}</h3>

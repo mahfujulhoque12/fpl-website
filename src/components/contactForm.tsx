@@ -31,7 +31,7 @@ const ContactForm = () => {
                 <p className="text-xl font-normal text-gray-600 w-[100%] md:w-[60%] mx-auto text-center mt-2">Have any questions? We’re here to help. Send us a message, and we’ll respond within 24 hours.</p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10 bg-white shadow-sm p-4 rounded-xl">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-10 bg-white shadow-sm p-4 rounded-xl">
 
             <div className="bg-gradient-to-t from-[#3528C5] to-[#7367F0]  p-6 rounded-lg relative">
 
