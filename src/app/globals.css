@@ -1,0 +1,263 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --mainColor: #2b2b2b;
+  --borderColor: #cacaca;
+}
+
+/* .nav__header {
+  position: static;
+  height: 60px;
+  background-color: white;
+  border-bottom: 1px solid #cacaca;
+} */
+
+/* .container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-inline: 16px;
+} */
+
+/* .toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  height: 60px;
+} */
+
+/* .logo__link {
+  display: flex;
+  align-items: center;
+}
+
+.logo__link img {
+  width: 150px;
+  height: 90px;
+} */
+
+/* .menu_icon {
+  border: none;
+  height: 45px;
+  width: 45px;
+  margin-left: -12px;
+  background-color: transparent;
+} */
+
+/* .menu_icon:focus {
+  outline: none;
+  background-color: #d7d4d4;
+  border-radius: 100px;
+  height: 45px;
+  width: 45px;
+} */
+
+/* .nav_item_content {
+  position: relative;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--borderColor);
+  height: 3rem;
+}
+
+
+
+
+
+.dropdown {
+  background-color: #fff;
+}
+
+.dropdown_content {
+  font-size: 0.875rem;
+}
+
+.dropdown_content h4 {
+  font-weight: 700;
+  line-height: 1.25rem;
+  margin-top: 0.75rem;
+}
+
+.dropdown_content li {
+  line-height: 1.85rem;
+}
+
+.dropdown_content li a {
+  color: inherit;
+  font-weight: 400;
+}
+
+/* ================================ 
+Hero
+=======================================*/
+
+/* ================================ 
+Mobile
+=======================================*/
+.mobile_navigation {
+  position: fixed;
+  z-index: 99;
+}
+
+.backdrop {
+  position: fixed;
+  inset: 0px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.drawer_content {
+  /* background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: 280px;
+  height: 100vh;
+  z-index: 99;
+  overflow-y: auto;
+  transition: 0.5s;
+  transform: translateX(-100%); */
+}
+
+.drawer_content.active {
+  transform: translateX(0);
+}
+
+.close_drawer {
+  /* text-align: end; */
+  border-bottom: 1px solid var(--borderColor);
+}
+.close_drawer button {
+  padding: 12px;
+  border: none;
+  background-color: white;
+}
+
+/* ================================ 
+MEDIA QUERIES
+=======================================*/
+
+@media (min-width: 996px) {
+  /* .container {
+    max-width: 996px;
+  }
+
+  .md\:h-auto {
+    height: auto;
+  }
+
+  .md\:block {
+    display: block;
+  }
+
+  .md\:hidden {
+    display: none;
+  } */
+  /* 
+  .logo__link {
+    margin-right: 1rem;
+  } */
+
+  /* .nav__container > nav > ul {
+    display: flex;
+    align-items: center;
+    line-height: 50px;
+  } */
+
+  /* .nav_item_content {
+    border-style: none;
+    height: auto;
+  }
+
+  .nav_item_content a {
+    padding-inline: 0.7rem;
+  } */
+
+  /* .nav_item_content .md\:hidden {
+    display: none;
+  } */
+
+  /* .register {
+    margin-left: auto;
+  } */
+
+  /* .dropdown {
+    position: absolute;
+    left: 0;
+    top: 60px;
+    width: 100%;
+    border-bottom: 1px solid var(--borderColor);
+    border-radius: 0 0 16px 16px;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    visibility: hidden;
+    z-index: 10;
+  } */
+
+  .nav__container ul li:focus-within .dropdown,
+  .nav__container ul li:hover .dropdown {
+    visibility: visible;
+  }
+
+  .nav_item_content:hover a:before,
+  .nav_item_content .active:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    width: 100%;
+    border-bottom: 2px solid #ffc879;
+  }
+
+  /* .dropdown_content {
+    display: grid;
+    gap: 1.25rem;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  } */
+
+  /* .dropdown_content h4 {
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+  } */
+}
+
+
+
+
+
+
+/* animation for why chose us */
+
+@keyframes enter {
+  0% {
+    opacity: 0;
+    transform: translateY(40px) scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(100) scale(1);
+  }
+}
+
+@keyframes exit {
+  0% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(100px) scale(0.9);
+  }
+}
+
+.animate-enter {
+  animation: enter 1s ease-out forwards;
+}
+
+.animate-exit {
+  animation: exit 1s ease-out forwards;
+}
