@@ -93,7 +93,7 @@ const Estimate: React.FC = () => {
           Calculate the approximate cost of doing up your home interiors
         </Paragraph>
 
-        <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-5 mb-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-5 mb-5">
           {cardData.map((card, index) => (
             <div
               key={index}

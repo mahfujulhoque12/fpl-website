@@ -7,7 +7,7 @@ const Subscribe = () => {
   return (
     <section className='bg-[#2B5240]'>
         <MaxWidthWrapper>
-        <div className="py-24 grid grid-cols-1 gap-10 md:grid-cols-2">
+        <div className="py-24 grid grid-cols-1 gap-10 lg:grid-cols-2">
         <div className='w-full md:w-[80%] '>
             <h4 className="text-2xl md:text-4xl	text-gray-100 font-semibold	">Sign up today and never miss another deal again!</h4>
         </div>

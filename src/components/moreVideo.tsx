@@ -53,16 +53,16 @@ const MoreVideo: React.FC = () => {
             {videoData.map(({url,thumbnail},index) => (
               <CarouselItem
                 key={index}
-                className="basis-full md:basis-1/3"
+                className="basis-full sm:basis-1/2 lg:basis-1/3"
                 onClick={() => openModal(url)}
               >
                 <div className="p-4 shadow-md border rounded-lg hover:shadow-lg transition-shadow duration-300 mb-2 cursor-pointer">
                   <img
                     src={thumbnail}
                     alt={`Video thumbnail ${index + 1}`}
-                    width={360}
+                    width={700}
                     height={300}
-                    className="rounded-md object-cover w-[400px] h-[350px]"
+                    className="rounded-md object-cover  h-[300px]"
                   />
                 </div>
               </CarouselItem>

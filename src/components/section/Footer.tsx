@@ -97,7 +97,7 @@ const Footer: React.FC = () => {
       </div>
       <div className="bg-red-600 text-white py-5">
         <MaxWidthWrapper>
-          <div className="flex flex-row justify-between">
+          <div className="flex flex-col gap-3 md:flex-row justify-between">
             <div>
               <p className="mb-0">
                 &copy; 2024 Livspace.com All Rights Reserved
