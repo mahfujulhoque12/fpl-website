@@ -19,25 +19,25 @@ type PageProps = {
   };
 };
 
-const page: FC<PageProps> = ({ params }) => {
-
+const Page: FC<PageProps> = ({ params }) => {
   const allInfo = cardData.find((card) => card.slug === params.slug);
 
-  const [selectedImage,setSelectedImage]=useState<string | null>(null)
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   return (
     <section className="py-10 md:py-15">
       <MaxWidthWrapper>
-        
         <div className=" gap-3  rounded-lg shadow-md p-4 border ">
           <Carousel>
             <CarouselContent>
               {allInfo &&
                 allInfo.allImageUrl &&
                 allInfo.allImageUrl.map((imageUrl: string, index: number) => (
-                  <CarouselItem className=" basis-full md:basis-1/3 ">
+                  <CarouselItem
+                    key={index}
+                    className=" basis-full md:basis-1/3 "
+                  >
                     <Image
-                      key={index}
                       src={imageUrl}
                       width={400}
                       height={500}
@@ -51,16 +51,18 @@ const page: FC<PageProps> = ({ params }) => {
             <CarouselNext />
           </Carousel>
         </div>
-                <h3 className="text-center font-bold uppercase text-3xl text-gray-700 pt-5">{allInfo?.title}</h3>
+        <h3 className="text-center font-bold uppercase text-3xl text-gray-700 pt-5">
+          {allInfo?.title}
+        </h3>
 
-                <div className="flex  justify-center mt-2 mb-1 w-full">
-                  <Link
-                    href="/cotesion"
-                    className=" gap-2 text-center  flex  bg-[#cf4045] px-4 py-1 text-white rounded-md hover:bg-[#c13136] transition-all text-sm duration-150"
-                  >
-                    Get Cotesion
-                  </Link>
-                </div>
+        <div className="flex  justify-center mt-2 mb-1 w-full">
+          <Link
+            href="/cotesion"
+            className=" gap-2 text-center  flex  bg-[#cf4045] px-4 py-1 text-white rounded-md hover:bg-[#c13136] transition-all text-sm duration-150"
+          >
+            Get Cotesion
+          </Link>
+        </div>
 
         <div className="mt-4 flex-col md:flex-row md:flex  md:gap-4">
           <div className="border w-full md:w-8/12 p-4 rounded-lg shadow-md">
@@ -121,8 +123,7 @@ const page: FC<PageProps> = ({ params }) => {
               <b>Complete Date:</b> {allInfo?.completeDate}
             </p>
 
-
-          <p className="text-gray-600 text-base mt-1">
+            <p className="text-gray-600 text-base mt-1">
               <b>Key Feature:</b> {allInfo?.feature}
             </p>
 
@@ -135,7 +136,7 @@ const page: FC<PageProps> = ({ params }) => {
                   width={100}
                   height={100}
                   className="h-[100px] rounded-md cursor-pointer"
-                  onClick={()=>setSelectedImage(image)}
+                  onClick={() => setSelectedImage(image)}
                 />
               ))}
             </div>
@@ -143,30 +144,29 @@ const page: FC<PageProps> = ({ params }) => {
         </div>
 
         {selectedImage && (
-           <div
-           className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
-           onClick={() => setSelectedImage(null)}
-         >
-           <div className="relative bg-white p-5 rounded-md">
-             <Image
-               src={selectedImage}
-               alt="Selected Image"
-               width={500}
-               height={500}
-               className="rounded-md max-w-full h-[400px] object-cover"
-             />
-             <button
-               onClick={() => setSelectedImage(null)}
-               className="absolute top-0 right-0 text-white  text-2xl"
-             >
-              <IoCloseCircleSharp className="text-red-500"/>
-
-             </button>
-           </div>
-         </div>
+          <div
+            className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
+            onClick={() => setSelectedImage(null)}
+          >
+            <div className="relative bg-white p-5 rounded-md">
+              <Image
+                src={selectedImage}
+                alt="Selected Image"
+                width={500}
+                height={500}
+                className="rounded-md max-w-full h-[400px] object-cover"
+              />
+              <button
+                onClick={() => setSelectedImage(null)}
+                className="absolute top-0 right-0 text-white  text-2xl"
+              >
+                <IoCloseCircleSharp className="text-red-500" />
+              </button>
+            </div>
+          </div>
         )}
       </MaxWidthWrapper>
     </section>
   );
 };
-export default page;
+export default Page;

@@ -1,9 +1,9 @@
 "use client";
-import React, { useRef, useState } from 'react';
-import emailjs from '@emailjs/browser';
-import Image from 'next/image';
-import Link from 'next/link';
-import plain from '/public/contact/contact3.png';
+import React, { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
+import Image from "next/image";
+import Link from "next/link";
+import plain from "/public/contact/contact3.png";
 
 interface FormData {
   firstName: string;
@@ -19,43 +19,44 @@ const ContactFormInfo: React.FC = () => {
   const form = useRef<HTMLFormElement>(null);
 
   const [formData, setFormData] = useState<FormData>({
-    firstName: '',
-    lastName: '',
-    email: '',
-    phone: '',
-    subject: '',
-    message: '',
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    subject: "",
+    message: "",
     agreeToPolicy: false,
   });
 
-  const [errors, setErrors] = useState<Partial<FormData>>({});
+  const [errors, setErrors] = useState<{ [K in keyof FormData]?: string }>({});
   const [successMessage, setSuccessMessage] = useState<string | null>(null);
-  const [loadin, setLoading] = useState(false)
-
+  const [loadin, setLoading] = useState(false);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
-    const { name, value, type, checked } = e.target;
+    const { name, value, type, } = e.target;
+    const checked = type === "checkbox" ? (e.target as HTMLInputElement).checked : undefined;
     setFormData({
       ...formData,
-      [name]: type === 'checkbox' ? checked : value,
+      [name]: type === "checkbox" ? checked : value,
     });
   };
 
   const validate = () => {
-    const tempErrors: Partial<FormData> = {};
-    if (!formData.firstName) tempErrors.firstName = 'First Name is required';
-    if (!formData.lastName) tempErrors.lastName = 'Last Name is required';
+    const tempErrors: { [K in keyof FormData]?: string } = {};
+    if (!formData.firstName) tempErrors.firstName = "First Name is required";
+    if (!formData.lastName) tempErrors.lastName = "Last Name is required";
     if (!formData.email) {
-      tempErrors.email = 'Email is required';
+      tempErrors.email = "Email is required";
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-      tempErrors.email = 'Email is not valid';
+      tempErrors.email = "Email is not valid";
     }
-    if (!formData.phone) tempErrors.phone = 'Phone Number is required';
-    if (!formData.subject) tempErrors.subject = 'Subject is required';
-    if (!formData.message) tempErrors.message = 'Message is required';
-    if (!formData.agreeToPolicy) tempErrors.agreeToPolicy = 'You must agree to the privacy policy';
+    if (!formData.phone) tempErrors.phone = "Phone Number is required";
+    if (!formData.subject) tempErrors.subject = "Subject is required";
+    if (!formData.message) tempErrors.message = "Message is required";
+    if (!formData.agreeToPolicy)
+      tempErrors.agreeToPolicy = "You must agree to the privacy policy";
     setErrors(tempErrors);
     return Object.keys(tempErrors).length === 0;
   };
@@ -63,29 +64,34 @@ const ContactFormInfo: React.FC = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (validate() && form.current) {
-      setLoading(true)
+      setLoading(true);
       emailjs
-        .sendForm('service_kfj3cro', 'template_lfluq19', form.current, 'orx1MIs4yluPGG7mH')
+        .sendForm(
+          "service_kfj3cro",
+          "template_lfluq19",
+          form.current,
+          "orx1MIs4yluPGG7mH"
+        )
         .then(
           () => {
-            console.log('SUCCESS!');
-            setSuccessMessage('Your message has been sent successfully!');
+            console.log("SUCCESS!");
+            setSuccessMessage("Your message has been sent successfully!");
             setFormData({
-              firstName: '',
-              lastName: '',
-              email: '',
-              phone: '',
-              subject: '',
-              message: '',
+              firstName: "",
+              lastName: "",
+              email: "",
+              phone: "",
+              subject: "",
+              message: "",
               agreeToPolicy: false,
             });
             setErrors({});
-            setTimeout(()=>setSuccessMessage(null),3000)
-            setLoading(false)
+            setTimeout(() => setSuccessMessage(null), 3000);
+            setLoading(false);
           },
           (error) => {
-            console.error('FAILED...', error.text);
-            setLoading(false)
+            console.error("FAILED...", error.text);
+            setLoading(false);
           }
         );
     }
@@ -93,7 +99,6 @@ const ContactFormInfo: React.FC = () => {
 
   return (
     <div>
-     
       <form ref={form} onSubmit={handleSubmit}>
         <div className="flex gap-4">
           <div className="w-full">
@@ -106,7 +111,9 @@ const ContactFormInfo: React.FC = () => {
               value={formData.firstName}
               onChange={handleChange}
             />
-            {errors.firstName && <p className="text-red-500 text-xs">{errors.firstName}</p>}
+            {errors.firstName && (
+              <p className="text-red-500 text-xs">{errors.firstName}</p>
+            )}
           </div>
           <div className="w-full">
             <label className="font-medium text-xs">Last Name</label>
@@ -118,7 +125,9 @@ const ContactFormInfo: React.FC = () => {
               value={formData.lastName}
               onChange={handleChange}
             />
-            {errors.lastName && <p className="text-red-500 text-xs">{errors.lastName}</p>}
+            {errors.lastName && (
+              <p className="text-red-500 text-xs">{errors.lastName}</p>
+            )}
           </div>
         </div>
 
@@ -133,7 +142,9 @@ const ContactFormInfo: React.FC = () => {
               value={formData.email}
               onChange={handleChange}
             />
-            {errors.email && <p className="text-red-500 text-xs">{errors.email}</p>}
+            {errors.email && (
+              <p className="text-red-500 text-xs">{errors.email}</p>
+            )}
           </div>
           <div className="w-full">
             <label className="font-medium text-xs">Phone Number</label>
@@ -145,7 +156,9 @@ const ContactFormInfo: React.FC = () => {
               value={formData.phone}
               onChange={handleChange}
             />
-            {errors.phone && <p className="text-red-500 text-xs">{errors.phone}</p>}
+            {errors.phone && (
+              <p className="text-red-500 text-xs">{errors.phone}</p>
+            )}
           </div>
         </div>
 
@@ -159,7 +172,9 @@ const ContactFormInfo: React.FC = () => {
             value={formData.subject}
             onChange={handleChange}
           />
-          {errors.subject && <p className="text-red-500 text-xs">{errors.subject}</p>}
+          {errors.subject && (
+            <p className="text-red-500 text-xs">{errors.subject}</p>
+          )}
         </div>
 
         <div className="w-full mt-8">
@@ -171,7 +186,9 @@ const ContactFormInfo: React.FC = () => {
             value={formData.message}
             onChange={handleChange}
           />
-          {errors.message && <p className="text-red-500 text-xs">{errors.message}</p>}
+          {errors.message && (
+            <p className="text-red-500 text-xs">{errors.message}</p>
+          )}
         </div>
 
         <div className="mt-8 flex gap-3">
@@ -182,25 +199,35 @@ const ContactFormInfo: React.FC = () => {
             onChange={handleChange}
           />
           <label className="text-base font-normal">
-            I agree to your <Link href="#" className="text-[#60D66A] underline">privacy policy</Link>
+            I agree to your{" "}
+            <Link href="#" className="text-[#60D66A] underline">
+              privacy policy
+            </Link>
           </label>
-          {errors.agreeToPolicy && <p className="text-red-500 text-xs">{errors.agreeToPolicy}</p>}
+          {errors.agreeToPolicy && (
+            <p className="text-red-500 text-xs">{errors.agreeToPolicy}</p>
+          )}
         </div>
         {successMessage && (
-        <p className="text-green-500 text-sm mt-5">{successMessage}</p>
-      )}
+          <p className="text-green-500 text-sm mt-5">{successMessage}</p>
+        )}
         <div className="flex justify-end mt-10">
           <button
             type="submit"
             className="px-6 py-2 bg-gradient-to-t from-[#20B038] to-[#60D66A] rounded-md text-gray-100 shadow-sm text-base font-medium"
           >
-            {loadin? "Sending...":"   Send Message"}
-         
+            {loadin ? "Sending..." : "   Send Message"}
           </button>
         </div>
 
         <div className="flex justify-end">
-          <Image src={plain} alt="img" width={100} height={100} className="me-16" />
+          <Image
+            src={plain}
+            alt="img"
+            width={100}
+            height={100}
+            className="me-16"
+          />
         </div>
       </form>
     </div>

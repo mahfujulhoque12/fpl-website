@@ -1,7 +1,8 @@
-"use client"
+"use client";
 import React, { useState } from "react";
 import MaxWidthWrapper from "@/components/layout/MaxWidthWrapper";
 import SubHeading from "./typography/SubHeading";
+import Image from "next/image";
 import {
   Carousel,
   CarouselContent,
@@ -10,6 +11,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { IoClose } from "react-icons/io5";
+import { FaPlayCircle } from "react-icons/fa";
 
 // Define the video data type
 type VideoData = {
@@ -18,15 +20,31 @@ type VideoData = {
 };
 
 const videoData: VideoData[] = [
-  { url: "https://www.youtube.com/embed/m55PTVUrlnA", thumbnail: "/cabinet/cabinet2.png" },
-  { url: "https://www.youtube.com/embed/JblrN5oNse4", thumbnail: "/cabinet/cabinet3.png" },
-  { url: "https://www.youtube.com/embed/bNnhr_bIR9c", thumbnail: "/cabinet/cabinet4.png" },
-  { url: "https://www.youtube.com/embed/WlxcujsvcIY?start=839", thumbnail:"/cabinet/cabinet5.png" },
-  { url: "https://www.youtube.com/embed/bNnhr_bIR9c", thumbnail: "/cabinet/cabinet6.png" },
-  { url: "https://www.youtube.com/embed/WlxcujsvcIY?start=839",thumbnail:"/cabinet/cabinet1.png" },
+  {
+    url: "https://www.youtube.com/embed/m55PTVUrlnA",
+    thumbnail: "/cabinet/cabinet2.png",
+  },
+  {
+    url: "https://www.youtube.com/embed/JblrN5oNse4",
+    thumbnail: "/cabinet/cabinet3.png",
+  },
+  {
+    url: "https://www.youtube.com/embed/bNnhr_bIR9c",
+    thumbnail: "/cabinet/cabinet4.png",
+  },
+  {
+    url: "https://www.youtube.com/embed/WlxcujsvcIY?start=839",
+    thumbnail: "/cabinet/cabinet5.png",
+  },
+  {
+    url: "https://www.youtube.com/embed/bNnhr_bIR9c",
+    thumbnail: "/cabinet/cabinet6.png",
+  },
+  {
+    url: "https://www.youtube.com/embed/WlxcujsvcIY?start=839",
+    thumbnail: "/cabinet/cabinet1.png",
+  },
 ];
-
-
 
 const MoreVideo: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -50,20 +68,23 @@ const MoreVideo: React.FC = () => {
         </SubHeading>
         <Carousel>
           <CarouselContent>
-            {videoData.map(({url,thumbnail},index) => (
+            {videoData.map(({ url, thumbnail }, index) => (
               <CarouselItem
                 key={index}
                 className="basis-full sm:basis-1/2 lg:basis-1/3"
                 onClick={() => openModal(url)}
               >
-                <div className="p-4 shadow-md border rounded-lg hover:shadow-lg transition-shadow duration-300 mb-2 cursor-pointer">
-                  <img
+                <div className="p-4 relative shadow-md z-10 border rounded-lg hover:shadow-lg transition-shadow duration-300 mb-2 cursor-pointer">
+                  <Image
                     src={thumbnail}
                     alt={`Video thumbnail ${index + 1}`}
                     width={700}
                     height={300}
                     className="rounded-md object-cover  h-[300px]"
                   />
+                   <div className="bg-dark">
+                  <FaPlayCircle className="absolute top-[45%] left-[50%] z-20 bg-white text-black rounded-full" size={40} />
+                  </div>
                 </div>
               </CarouselItem>
             ))}
@@ -79,7 +100,8 @@ const MoreVideo: React.FC = () => {
           >
             <div
               className="relative bg-white p-4 rounded-lg shadow-lg max-w-3xl w-full"
-              onClick={(e) => e.stopPropagation()}>
+              onClick={(e) => e.stopPropagation()}
+            >
               <button
                 className="absolute top-1 right-1 text-gray-700 hover:text-gray-900"
                 onClick={closeModal}

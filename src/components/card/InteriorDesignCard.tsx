@@ -1,23 +1,21 @@
 import Image from "next/image";
-import { Button } from "@/components/ui/button";
+
 import Link from "next/link";
-import { ChevronRight } from "lucide-react";
 
 const InteriorDesignCard = ({
   imageSrc,
-caption,
+  caption,
   title,
   description,
   href,
 }: {
   imageSrc: string;
-  caption:string;
+  caption: string;
   title: string;
   description: string;
-  href?:string;
-}) =>
-   {
-    console.log(href)
+  href: string;
+}) => {
+  console.log(href);
   return (
     <div className="w-full max-w-sm  rounded-lg  overflow-hidden bg-white shadow-md dark:bg-gray-800 hover:shadow-lg transition-all duration-500">
       <Image
@@ -40,9 +38,7 @@ caption,
           <path d="M2 7v10l10 5 10-5V7H2z" />
         </svg>
 
-        <h3 className="mx-3 text-lg font-semibold text-white">
-         {caption}
-        </h3>
+        <h3 className="mx-3 text-lg font-semibold text-white">{caption}</h3>
       </div>
 
       <div className="p-4">
@@ -59,7 +55,7 @@ caption,
             href={href}
             className=" gap-2 text-center  flex  bg-[#cf4045] px-4 py-1 text-white rounded-md hover:bg-[#c13136] transition-all text-sm duration-150"
           >
-            More Detailsdd
+            More Details
           </Link>
         </div>
       </div>
