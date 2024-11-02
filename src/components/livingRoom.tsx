@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import MaxWidthWrapper from "./layout/MaxWidthWrapper";
 import SubHeading from "./typography/SubHeading";
 import Paragraph from "./typography/Paragraph";
@@ -16,12 +16,16 @@ import { cardData } from "@/data/livingRoomData";
 
 const LivingRoom: React.FC = () => {
   const router = useRouter();
+  const [loadingSlug, setLoadingSlug] = useState<string | null>(null); 
 
-  const handleMoreDetails = (slug: string) => {
+  const handleMoreDetails = async (slug: string) => {
+    setLoadingSlug(slug); 
+    await new Promise((resolve) => setTimeout(resolve, 500));
     router.push(`/interiors-faculty/${slug}`);
+    setLoadingSlug(null); 
   };
 
-  const livingRoom = cardData.filter(card => card.id >= 1 && card.id <= 6);
+  const livingRoom = cardData.filter((card) => card.id >= 1 && card.id <= 6);
 
   return (
     <section className="py-10 md:py-15">
@@ -53,9 +57,17 @@ const LivingRoom: React.FC = () => {
                     <button
                       type="button"
                       onClick={() => handleMoreDetails(card.slug)}
+                      disabled={loadingSlug === card.slug} 
                       className="gap-2 text-center flex bg-[#cf4045] px-4 py-1 text-white rounded-md hover:bg-[#c13136] transition-all text-sm duration-150"
                     >
-                      More Details
+                      {loadingSlug === card.slug ? ( 
+                        <div className="flex items-center">
+                          <span className="loader mr-2" />
+                          Loading...
+                        </div>
+                      ) : (
+                        "More Details"
+                      )}
                     </button>
                   </div>
                 </div>

@@ -123,49 +123,7 @@ const menuData: MenuDataItem[] = [
  
 
   { label: "Livespace TV", href: "/others-faculty" },
-  {
-    label: "Cities",
-    href: "#",
-    nestedMenu: [
-      {
-        heading: "Cities",
-        submenu: [
-          { label: "Dhaka", href: "#" },
-          { label: "Comilla", href: "#" },
-          { label: "Chittagong", href: "#" },
-          { label: "Noyakhali", href: "#" },
-          { label: "Chadpur", href: "#" },
-          { label: "Feni", href: "#" },
-        ],
-      },
-      {
-        heading: "Cities",
-        submenu: [
-          { label: "Khulna", href: "#" },
-          { label: "Shatkhera", href: "#" },
-          { label: "Rawjan", href: "#" },
-          { label: "Manikgonj", href: "#" },
-          { label: "Cox's Bazar", href: "#" },
-          { label: "Koyakata", href: "#" },
 
-        ],
-      },
-      {
-        heading: "Cities",
-        submenu: [
-          { label: "Sylhet", href: "#" },
-          { label: "Habigonj", href: "#" },
-          { label: "Maduppur", href: "#" },
-          {
-            label: "Shreemongol",
-            href: "#",
-          },
-          { label: "Lokkhipur", href: "#" },
-          { label: "Barisal", href: "#" },
-        ],
-      },
-    ],
-  },
   { label: "About Us", href: "/about-us" },
   { label: "Blogs", href: "/blogs" },
   { label: "Contact Us", href: "/contact-us" },

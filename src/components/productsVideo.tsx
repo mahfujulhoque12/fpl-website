@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import MaxWidthWrapper from "@/components/layout/MaxWidthWrapper";
 import SubHeading from "./typography/SubHeading";
+import Image from "next/image";
 import {
   Carousel,
   CarouselContent,
@@ -10,6 +11,8 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { IoClose } from "react-icons/io5";
+import { FaPlayCircle } from "react-icons/fa";
+
 
 // Define the video data type
 type VideoData = {
@@ -18,12 +21,30 @@ type VideoData = {
 };
 
 const videoData: VideoData[] = [
-  { url: "https://www.youtube.com/embed/m55PTVUrlnA", thumbnail: "/thumb/tumb.png" },
-  { url: "https://www.youtube.com/embed/JblrN5oNse4", thumbnail: "/thumb/thum2.png" },
-  { url: "https://www.youtube.com/embed/bNnhr_bIR9c", thumbnail: "/thumb/thum3.png" },
-  { url: "https://www.youtube.com/embed/WlxcujsvcIY?start=839", thumbnail:"/blog/blog5.png" },
-  { url: "https://www.youtube.com/embed/bNnhr_bIR9c", thumbnail: "/blog/blog6.png" },
-  { url: "https://www.youtube.com/embed/WlxcujsvcIY?start=839",thumbnail:"/blog/blog7.png" },
+  {
+    url: "https://www.youtube.com/embed/m55PTVUrlnA",
+    thumbnail: "/blog/blog2.png",
+  },
+  {
+    url: "https://www.youtube.com/embed/JblrN5oNse4",
+    thumbnail:"/blog/blog3.png",
+  },
+  {
+    url: "https://www.youtube.com/embed/bNnhr_bIR9c",
+    thumbnail: "/blog/blog4.png",
+  },
+  {
+    url: "https://www.youtube.com/embed/WlxcujsvcIY?start=839",
+    thumbnail: "/blog/blog5.png",
+  },
+  {
+    url: "https://www.youtube.com/embed/bNnhr_bIR9c",
+    thumbnail: "/blog/blog6.png",
+  },
+  {
+    url: "https://www.youtube.com/embed/WlxcujsvcIY?start=839",
+    thumbnail: "/blog/blog7.png",
+  },
 ];
 
 const ProductsVideo: React.FC = () => {
@@ -54,14 +75,18 @@ const ProductsVideo: React.FC = () => {
                 className="basis-full md:basis-1/2 lg:basis-1/3"
                 onClick={() => openModal(url)}
               >
-                <div className="p-4 shadow-md border rounded-lg hover:shadow-lg transition-shadow duration-300 mb-2 cursor-pointer">
-                  <img
+                <div className="p-4 relative z-10 shadow-md border rounded-lg hover:shadow-lg transition-shadow duration-300 mb-2 cursor-pointer">
+                  <Image
                     src={thumbnail}
                     alt={`Video thumbnail ${index + 1}`}
                     width={700}
                     height={300}
                     className="rounded-md object-cover h-[300px]"
                   />
+                  <div className="bg-dark">
+                  <FaPlayCircle className="absolute top-[45%] left-[50%] z-20 bg-white text-black rounded-full" size={40} />
+                  </div>
+
                 </div>
               </CarouselItem>
             ))}
@@ -71,8 +96,12 @@ const ProductsVideo: React.FC = () => {
         </Carousel>
 
         {isModalOpen && activeVideoUrl && (
-          <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50" onClick={closeModal}>
-            <div className="relative bg-white p-4 rounded-lg shadow-lg max-w-3xl w-full"
+          <div
+            className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50"
+            onClick={closeModal}
+          >
+            <div
+              className="relative bg-white p-4 rounded-lg shadow-lg max-w-3xl w-full"
               onClick={(e) => e.stopPropagation()}
             >
               <button

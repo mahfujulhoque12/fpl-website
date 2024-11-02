@@ -1,4 +1,3 @@
-
 "use client";
 import React from "react";
 import MaxWidthWrapper from "@/components/layout/MaxWidthWrapper";
@@ -8,8 +7,6 @@ import es1 from "/public/fac1.png";
 import es2 from "/public/duplexhouse/duplex1.png";
 import es3 from "/public/bedroom/bed1.png";
 
-import esall from "/public/esall.png";
-import { IoIosArrowForward } from "react-icons/io";
 import { motion, useAnimation } from "framer-motion";
 import SubHeading from "./typography/SubHeading";
 import Paragraph from "./typography/Paragraph";
@@ -20,7 +17,7 @@ type CardData = {
   title: string;
   des: string;
   imageUrl: string;
-  href:string;
+  href: string;
 };
 
 const cardData: CardData[] = [
@@ -29,41 +26,40 @@ const cardData: CardData[] = [
     title: "Interiors Faculty",
     des: "Know the estimate price for your full home interiors price for your full home interiors",
     imageUrl: es1.src,
-    href:"/interiors-faculty"
-   
+    href: "/interiors-faculty",
   },
   {
     id: 2,
     title: "Construction Faculty",
     des: "Know the estimate price for your full home interiors",
     imageUrl: es2.src,
-    href:"/construction-faculty"
-
+    href: "/construction-faculty",
   },
   {
     id: 3,
     title: "Furniture Faculty",
     des: "Know the estimate price for your full home interiors",
     imageUrl: es3.src,
-    href:"#"
-  
+    href: "#",
   },
 ];
 const Estimate: React.FC = () => {
-  const words = ["Interiors Faculty", "Construction Faculty", "Furniture Faculty"];
+  const words = [
+    "Interiors Faculty",
+    "Construction Faculty",
+    "Furniture Faculty",
+  ];
   const [currentIndex, setCurrentIndex] = useState(0);
   const controls = useAnimation();
 
   useEffect(() => {
     const interval = setInterval(() => {
- 
       controls.start({
         opacity: 0,
         scale: 0.8,
         transition: { duration: 0.5 },
       });
 
-    
       setTimeout(() => {
         setCurrentIndex((prevIndex) => (prevIndex + 1) % words.length);
         controls.start({
@@ -75,8 +71,8 @@ const Estimate: React.FC = () => {
     }, 2000);
 
     return () => clearInterval(interval);
-  }, [controls, words.length]); 
-  
+  }, [controls, words.length]);
+
   return (
     <section className="py-10 md:py-15">
       <MaxWidthWrapper>
@@ -107,21 +103,19 @@ const Estimate: React.FC = () => {
                   height={400}
                   className="h-[300px] rounded-md object-cover"
                 />
-                
-            
               </div>
               <h3 className="text-xl md:text-2xl mt-1 font-semibold  text-gray-700">
                 {card.title}
               </h3>
               <p className="text-base  md:mb-0 py-1">{card.des}</p>
               <div className="flex  justify-start w-full">
-                  <Link
-                    href={card.href}
-                    className=" gap-2 text-center  flex  bg-[#cf4045] px-4 py-1 text-white rounded-md hover:bg-[#c13136] transition-all text-sm duration-150"
-                  >
-                    Get More Info
-                  </Link>
-                </div>
+                <Link
+                  href={card.href}
+                  className=" gap-2 text-center  flex  bg-[#cf4045] px-4 py-1 text-white rounded-md hover:bg-[#c13136] transition-all text-sm duration-150"
+                >
+                  Get More Info
+                </Link>
+              </div>
             </div>
           ))}
         </div>

@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import MaxWidthWrapper from "@/components/layout/MaxWidthWrapper";
-import { IoIosArrowForward } from "react-icons/io";
+
 import {
   Carousel,
   CarouselContent,
@@ -26,12 +26,12 @@ const cardData: CardData[] = [
   },
   {
     id: 2,
-    imageUrl:  "/family/family2.png",
+    imageUrl: "/family/family2.png",
     des: "I recently purchased a sofa from [Furniture Store Name], and I'm beyond impressed with both the product and the service! The quality of the furniture is exceptional, and it perfectly complements my living room décor. The materials feel durable and luxurious, and the craftsmanship is top-notch.",
   },
   {
     id: 3,
-    imageUrl:  "/family/family3.png",
+    imageUrl: "/family/family3.png",
     des: "I recently purchased a sofa from [Furniture Store Name], and I'm beyond impressed with both the product and the service! The quality of the furniture is exceptional, and it perfectly complements my living room décor. The materials feel durable and luxurious, and the craftsmanship is top-notch.",
   },
   {
@@ -41,7 +41,7 @@ const cardData: CardData[] = [
   },
   {
     id: 5,
-    imageUrl:  "/family/family5.png",
+    imageUrl: "/family/family5.png",
     des: "I recently purchased a sofa from [Furniture Store Name], and I'm beyond impressed with both the product and the service! The quality of the furniture is exceptional, and it perfectly complements my living room décor. The materials feel durable and luxurious, and the craftsmanship is top-notch.",
   },
 ];
@@ -56,26 +56,25 @@ const MoreReview: React.FC = () => {
   return (
     <section className="py-10 md:py-15">
       <MaxWidthWrapper>
-   
-          <SubHeading className="text-center text-gray-700 font-bold uppercase">
-            here we show our more happy clients
-          </SubHeading>
-    
+        <SubHeading className="text-center text-gray-700 font-bold uppercase">
+          here we show our more happy clients
+        </SubHeading>
 
         <Carousel className="mt-20">
           <CarouselContent className="">
             {cardData.map((card) => (
-              <CarouselItem key={card.id} className="basis-full sm:basis-1/2 lg:basis-1/3">
+              <CarouselItem
+                key={card.id}
+                className="basis-full sm:basis-1/2 lg:basis-1/3"
+              >
                 <div
                   className="relative shadow-sm p-6 border rounded-lg hover:shadow-md transition-shadow duration-300 bg-cover bg-center bg-no-repeat mb-2"
                   style={{
                     backgroundImage: `url(${card.imageUrl})`,
                   }}
                 >
-             
                   <div className="absolute inset-0 bg-black bg-opacity-50 rounded-lg z-0" />
 
-          
                   <div className="relative p-4 rounded-md z-10">
                     <div className="flex justify-center text-yellow-400 gap-2 text-xl">
                       <FaStar />

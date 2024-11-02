@@ -2,7 +2,6 @@
 import { useState, useRef } from "react";
 import Link from "next/link";
 import MaxWidthWrapper from "@/components/layout/MaxWidthWrapper";
-import logo from "/public/fbl-logo-with-title.png";
 import mobileLogo from "/public/fbl-logo.png";
 import UserProfile from "./UserProfile";
 import { AlignJustify } from "lucide-react";
@@ -38,7 +37,7 @@ const Navigation = ({ mobileMenuPos = "left" }: MobileMenuOpeningPosition) => {
          </div>
 
           <Link  href="/">
-            <Image src={logo} alt="logo" width={140} height={100} className="hidden md:block w-auto h-auto object-cover" />
+            <Image src={mobileLogo} alt="logo" width={50} height={50} className="hidden md:block  h-auto object-cover" />
           </Link>
 
           <div className="hidden lg:block">

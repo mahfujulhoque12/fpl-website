@@ -1,12 +1,11 @@
 import React from "react";
 import MaxWidthWrapper from "@/components/layout/MaxWidthWrapper";
-import Link from "next/link";
+
 import Shop1 from "/public/intorior/home1.png";
 import Shop3 from "/public/intorior/home2.png";
 import Shop2 from "/public/intorior/home3.png";
 import Shop4 from "/public/intorior/home4.png";
 
-import { IoIosArrowForward } from "react-icons/io";
 import Image from "next/image";
 import SubHeading from "./typography/SubHeading";
 import Paragraph from "./typography/Paragraph";
@@ -22,25 +21,29 @@ const cardData: CardData[] = [
   {
     id: 1,
     title: "Modular Interiors",
-    description: "Functional kitchen, wardrobe, and storage kitchen, wardrobe, and storage wardrobe, and storage",
+    description:
+      "Functional kitchen, wardrobe, and storage kitchen, wardrobe, and storage wardrobe, and storage",
     imageUrl: Shop1.src,
   },
   {
     id: 2,
     title: "Full Home Interiors",
-    description: "Turnkey interior solutions for your home kitchen, wardrobe, and storage wardrobe, and storage",
+    description:
+      "Turnkey interior solutions for your home kitchen, wardrobe, and storage wardrobe, and storage",
     imageUrl: Shop2.src,
   },
   {
     id: 3,
     title: "Luxury Interiors",
-    description: "Tailored interiors that redefine elegance kitchen, wardrobe, and storage wardrobe, and storage",
+    description:
+      "Tailored interiors that redefine elegance kitchen, wardrobe, and storage wardrobe, and storage",
     imageUrl: Shop3.src,
   },
   {
     id: 4,
     title: "Renovations",
-    description: "Expert solutions to upgrade your home kitchen, wardrobe, and storage,wardrobe, and storage",
+    description:
+      "Expert solutions to upgrade your home kitchen, wardrobe, and storage,wardrobe, and storage",
     imageUrl: Shop4.src,
   },
 ];
@@ -65,7 +68,7 @@ const ShopCard: React.FC = () => {
               key={card.id}
               className="group shadow-md border hover:shadow-sm hover:scale-[102%] rounded-[5px] overflow-hidden transition-translate duration-500"
             >
-              <div  className="block">
+              <div className="block">
                 <div className="relative w-full h-64">
                   <Image
                     src={card.imageUrl}
@@ -78,9 +81,7 @@ const ShopCard: React.FC = () => {
                   <h3 className="text-xl font-bold text-gray-600">
                     {card.title}
                   </h3>
-                  <p className="text-gray-500 pt-1 pb-4">
-                    {card.description}
-                  </p>
+                  <p className="text-gray-500 pt-1 pb-4">{card.description}</p>
                 </div>
               </div>
             </div>

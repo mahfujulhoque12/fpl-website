@@ -55,12 +55,12 @@ const InteriorDesignGallery = () => {
           </SubHeading>
           <Paragraph className="mb-3 md:mb-5 text-start w-full md:w-[65%] mx-auto text-gray-500">
             Whether you are looking for complete interior solutions, stylish
-            renovations, or custom modular designs, we’ve got everything you
+            renovations, or custom modular designs, we ve got everything you
             need for your home or office. Explore our extensive collection of
             furniture and decor, and let us support you every step of the way!
           </Paragraph>
         </div>
-        <div className="grid grid-cols-1 rounded-md sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-4 p-4">
+        <div className="grid grid-cols-1 rounded-md sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4  gap-4 p-4">
           {designs.map((design, index) => (
             <InteriorDesignCard
               key={index}

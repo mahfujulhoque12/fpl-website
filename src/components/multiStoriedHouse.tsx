@@ -1,9 +1,9 @@
 "use client";
-import React from "react";
+import React,{useState} from "react";
 import MaxWidthWrapper from "./layout/MaxWidthWrapper";
 import SubHeading from "./typography/SubHeading";
 import Paragraph from "./typography/Paragraph";
-import { IoIosArrowForward } from "react-icons/io";
+
 import {
   Carousel,
   CarouselContent,
@@ -19,9 +19,14 @@ import { cardData } from "@/data/constractionFacalty";
 const MultiStoriedHouse = () => {
   const router = useRouter();
 
-  const handleMoreDetails = (slug: string) => {
+  const [loadingSlug, setLoadingSlug] = useState<string | null>(null); 
+  const handleMoreDetails = async (slug: string) => {
+    setLoadingSlug(slug)
+    await new Promise((resolve)=>(setTimeout(resolve,500))) 
     router.push(`/construction-faculty/${slug}`);
+    setLoadingSlug(null)
   };
+
   const multiData = cardData.filter((card) => card.id >= 19 && card.id <= 24);
 
   return (
@@ -37,7 +42,10 @@ const MultiStoriedHouse = () => {
         <Carousel>
           <CarouselContent>
             {multiData?.map((card) => (
-              <CarouselItem className="basis-full sm:basis-1/2 md:basis-1/3">
+              <CarouselItem
+                key={card.id}
+                className="basis-full sm:basis-1/2 md:basis-1/3"
+              >
                 <div className="border p-3 shadow-md mb-2 rounded-lg hover:scale-[102%] transition translate duration-500  h-full flex flex-col">
                   <Image
                     src={card.imageUrl as string}
@@ -56,8 +64,16 @@ const MultiStoriedHouse = () => {
                       type="button"
                       className=" gap-2 text-center  flex  bg-[#cf4045] px-4 py-1 text-white rounded-md hover:bg-[#c13136] transition-all text-sm duration-150"
                       onClick={() => handleMoreDetails(card.slug)}
-                    >
-                      More Details
+                      disabled={loadingSlug === card.slug}
+                      >
+                         {loadingSlug === card.slug ? ( 
+                          <div className="flex items-center">
+                            <span className="loader mr-2" />
+                            Loading...
+                          </div>
+                        ) : ( 
+                          "More Details"
+                        )}
                     </button>
                   </div>
                 </div>

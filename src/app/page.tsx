@@ -11,7 +11,6 @@ import HeroSlider from "@/components/section/HeroSlider";
 import InteriorDesignGallery from "@/components/section/InteriorDesignGallery";
 import FaqAccordion from "@/components/faq/FaqAccordion";
 import CallToAction from "@/components/CallToAction";
-import { ImageCarousel } from "@/components/ImageCarousel";
 
 export default function Home() {
   return (
@@ -21,13 +20,11 @@ export default function Home() {
         <InteriorDesignGallery />
         <InteriorDesigns />
         <ShopCard />
-        <ProductsVideo/>
-        {/* <WhyChoseUs /> */}
+        <ProductsVideo />
         <Estimate />
         <Expreence />
         <Review />
         <GlimpseHomes />
-        {/* <ImageCarousel /> */}
         <FaqAccordion />
         <CallToAction />
       </main>

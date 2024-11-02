@@ -2,6 +2,8 @@ import Link from "next/link";
 import MaxWidthWrapper from "@/components/layout/MaxWidthWrapper";
 import DropdownContent from "./DropdownContent";
 import { ChevronDown, ChevronUp } from "lucide-react";
+import { useRouter } from 'next/navigation';
+import { useState } from 'react'; 
 
 // Define types for the component props
 interface SubmenuItem {
@@ -31,27 +33,40 @@ const MenuItem: React.FC<MenuItemProps> = ({
   active,
   setIsDrawerOpen,
 }) => {
+  const router = useRouter();
+  const [loading, setLoading] = useState(false); 
+
   const handleClick = () => {
-    // Blur the active element to lose focus
     const activeElement = document.activeElement as HTMLElement | null;
     activeElement?.blur();
   };
 
+  const handleLinkClick = async () => {
+    setIsDrawerOpen?.(false);
+    handleClick();
+    setLoading(true); 
+    await new Promise(resolve => setTimeout(resolve, 1000)); 
+    router.push(href); 
+    setLoading(false); 
+  };
+
   return (
     <li>
-      <div className="nav_item_content relative flex w-ful justify-between border-b border-[#cacaca] h-12 lg:border-none lg:h-auto">
-        <Link
-          href={href}
-          className={`${
-            active ? "active" : ""
-          } text-inherit w-full text-[14.5px] font-medium px-4 flex items-center lg:px-[0.7rem]`}
-          onClick={() => {
-            setIsDrawerOpen?.(false);
-            handleClick();
-          }}
+      <div className="nav_item_content relative flex w-full justify-between border-b border-[#cacaca] h-12 lg:border-none lg:h-auto">
+        <button
+          className={`${active ? "active" : ""} text-inherit w-full text-[14.5px] font-medium px-4 flex items-center lg:px-[0.7rem]`}
+          onClick={handleLinkClick} 
+          disabled={loading} 
         >
-          {label}
-        </Link>
+          {loading ? (
+            <div className="flex items-center">
+              <span className="loader mr-2" /> 
+              Loading...
+            </div>
+          ) : (
+            label
+          )}
+        </button>
         {nestedMenu && (
           <button
             className="px-3 border-none bg-white flex items-center lg:hidden"

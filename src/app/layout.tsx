@@ -4,7 +4,6 @@ import "./globals.css";
 
 import Navigation from "@/components/navbar/Navigation";
 import Footer from "@/components/section/Footer";
-import SocialMediaIcons from "@/components/social/SocialMediaIcons";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -23,7 +22,6 @@ export default function RootLayout({
 
         {children}
         <Footer />
-        {/* <SocialMediaIcons /> */}
       </body>
     </html>
   );

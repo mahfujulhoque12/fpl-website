@@ -2,7 +2,6 @@ import React from "react";
 import MaxWidthWrapper from "@/components/layout/MaxWidthWrapper";
 import Image from "next/image";
 import Banner from "/public/ex.png";
-import Link from "next/link";
 
 const Experience: React.FC = () => {
   return (
