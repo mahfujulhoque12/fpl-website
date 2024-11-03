@@ -2,7 +2,10 @@ import { useState, useRef, useEffect, KeyboardEvent } from "react";
 import { X } from "lucide-react";
 import MegaMenu from "@/components/navbar/MegaMenu";
 import { cn } from "@/lib/utils";
+import mobileLogo from "/public/fbl-logo.png";
+import Image from "next/image";
 
+import Link from "next/link";
 // Define types for the props
 interface MobileNavigationDrawerProps {
   isDrawerOpen: boolean;
@@ -81,7 +84,12 @@ const MobileNavigationDrawer: React.FC<MobileNavigationDrawerProps> = ({
             mobileMenuPos === "right" && "text-start"
           )}
         >
-          <button
+
+          <div  className="flex justify-between">
+            <div className="p-2">
+            <Image src={mobileLogo} alt="logo" width={50} height={50} className="  h-auto object-cover" />
+            </div>
+            <button
             onClick={() => {
               setIsDrawerOpen(false);
               // Focus the drawer button when it closes
@@ -89,9 +97,16 @@ const MobileNavigationDrawer: React.FC<MobileNavigationDrawerProps> = ({
                 drawerButtonRef.current.focus();
               }
             }}
+           
           >
+          
+          
+          
             <X size={30} />
           </button>
+          </div>
+
+        
         </div>
         <div>
           <MegaMenu

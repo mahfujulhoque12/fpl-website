@@ -11,7 +11,9 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { IoClose } from "react-icons/io5";
-import { FaPlayCircle } from "react-icons/fa";
+import { PiGooglePlayLogoFill } from "react-icons/pi";
+
+
 
 
 // Define the video data type
@@ -83,9 +85,11 @@ const ProductsVideo: React.FC = () => {
                     height={300}
                     className="rounded-md object-cover h-[300px]"
                   />
-                  <div className="bg-dark">
-                  <FaPlayCircle className="absolute top-[45%] left-[50%] z-20 bg-white text-black rounded-full" size={40} />
-                  </div>
+                 <div className="absolute top-[45%] left-[45%] w-12 h-12 bg-black rounded-full flex items-center justify-center">
+                <PiGooglePlayLogoFill className="text-white" size={24} />
+
+              </div>
+
 
                 </div>
               </CarouselItem>
