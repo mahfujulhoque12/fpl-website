@@ -60,7 +60,7 @@ const Page: FC<PageProps> = ({ params }) => {
             href="/cotesion"
             className="gap-2 text-center flex bg-[#cf4045] px-4 py-1 text-white rounded-md hover:bg-[#c13136] transition-all text-sm duration-150"
           >
-            Get Cotesion
+            Get Quotation
           </Link>
         </div>
 

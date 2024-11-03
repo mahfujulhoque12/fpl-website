@@ -10,6 +10,7 @@ import { FaFacebook } from "react-icons/fa";
 import { LuInstagram } from "react-icons/lu";
 import { FaLinkedin } from "react-icons/fa";
 import client from "/public/blog/client.png";
+import { FaArrowRightToBracket } from "react-icons/fa6";
 
 type ParamsProps = {
   params: {
@@ -38,7 +39,7 @@ const getCurrentDate = (): string => {
 };
 
 const Page: FC<ParamsProps> = ({ params }) => {
-  const [selectedBlog, setSelectedBlog] = useState<BlogCard | null>(
+  const [selectedBlog] = useState<BlogCard | null>(
     cardData.find((card) => card.slug === params.slug) || null
   );
 
@@ -195,9 +196,9 @@ const Page: FC<ParamsProps> = ({ params }) => {
                 />
                 <div>
                   <p className="text-sm font-semibold text-gray-600">{card.title}</p>
-                  <div className="flex justify-end">
-                    <button className="text-center bg-[#cf4045] px-3 py-1 text-white rounded-md hover:bg-[#c13136] transition-all text-sm duration-150">
-                      Details
+                  <div className="flex justify-end items-center">
+                    <button className="text-center  px-3 py-1 rounded-fullflex items-center text-[#c13136] transition-all text-sm duration-150">
+                    <FaArrowRightToBracket size={20}/>
                     </button>
                   </div>
                 </div>

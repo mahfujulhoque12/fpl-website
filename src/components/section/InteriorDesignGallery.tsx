@@ -4,7 +4,6 @@ import SubHeading from "../typography/SubHeading";
 import Paragraph from "../typography/Paragraph";
 
 import image3 from "/public/facalty/int.png";
-import image4 from "/public/facalty/furniture.png";
 import image5 from "/public/facalty/others.png";
 import image2 from "/public/facalty/cons.png";
 
@@ -12,34 +11,26 @@ import image2 from "/public/facalty/cons.png";
 const InteriorDesignGallery = () => {
   const designs = [
     {
+      id:1,
       imageSrc: image3.src,
       caption:"Interiors Faculty",
-      title: "Modern Living Room",
       description:
         "A cozy design that incorporates natural elements, featuring earthy tones and wooden accents.",
         href:"/interiors-faculty",
 
     },
     {
+      id:2,
       imageSrc: image2.src,
       caption:"Construction Faculty",
-      title: "Rustic Bedroom",
       description:
         "A cozy design that incorporates natural elements, featuring earthy tones and wooden accents.",
         href:"/construction-faculty",
     },
     {
-      imageSrc: image4.src,
-      caption:"Furniture Faculty",
-      title: "Elegant Dining Room",
-      description:
-        "A cozy design that incorporates natural elements, featuring earthy tones and wooden accents.",
-        href:"#"
-    },
-    {
+      id:4,
       imageSrc: image5.src,
       caption:"Others Faculty",
-      title: "Chic Home Office",
       description:
         "A cozy design that incorporates natural elements, featuring earthy tones and wooden accents.",
         href:"#",
@@ -60,13 +51,13 @@ const InteriorDesignGallery = () => {
             furniture and decor, and let us support you every step of the way!
           </Paragraph>
         </div>
-        <div className="grid grid-cols-1 rounded-md sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4  gap-4 p-4">
-          {designs.map((design, index) => (
+        <div className="grid grid-cols-1 rounded-md sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3  gap-4 p-4">
+          {designs.map((design) => (
             <InteriorDesignCard
-              key={index}
+              key={design.id}
+              id={design.id} 
               imageSrc={design.imageSrc}
               caption={design.caption}
-              title={design.title}
               description={design.description}
               href={design.href}
             />

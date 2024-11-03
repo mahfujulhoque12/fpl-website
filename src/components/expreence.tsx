@@ -2,6 +2,7 @@ import React from "react";
 import MaxWidthWrapper from "@/components/layout/MaxWidthWrapper";
 import Image from "next/image";
 import Banner from "/public/ex.png";
+import Link from 'next/link';
 
 const Experience: React.FC = () => {
   return (
@@ -9,6 +10,7 @@ const Experience: React.FC = () => {
       <MaxWidthWrapper>
         <div className="w-full py-4">
           <div>
+            <Link href="/contact-us">
             <Image
               src={Banner}
               className="rounded-md"
@@ -17,6 +19,8 @@ const Experience: React.FC = () => {
               width={1920}
               height={1080}
             />
+            </Link>
+           
           </div>
         </div>
       </MaxWidthWrapper>

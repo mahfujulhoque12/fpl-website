@@ -1,44 +1,24 @@
+"use client"
 import React from "react";
 import MaxWidthWrapper from "@/components/layout/MaxWidthWrapper";
 import { IoIosArrowForward } from "react-icons/io";
 import Image from "next/image";
-import Trand from "/public/tranding/tranding.png";
-import Trand2 from "/public/tranding/tranding2.png";
-import Trand3 from "/public/tranding/tranding3.png";
 import Link from "next/link";
 import SubHeading from "./typography/SubHeading";
 import Paragraph from "./typography/Paragraph";
+import { cardData } from "@/data/intoriorData";
+import { useRouter } from "next/navigation";
 
-type CardData = {
-  id: number;
-  imageUrl: string;
-  title: string;
-  des: string;
-};
-
-const cardData: CardData[] = [
-  {
-    id: 1,
-    imageUrl: Trand.src,
-    title: "False Ceiling Cost in Kolkata: Designs, Materials and Inspirations",
-    des: " Anusha Kulal | September 20, 2024",
-  },
-  {
-    id: 2,
-    imageUrl: Trand2.src,
-    title: "Beyond Royalty: Purple Two-Colour Combination for Bedroom Walls",
-    des: " Anusha Kulal | September 20, 2024",
-  },
-  {
-    id: 3,
-    imageUrl: Trand3.src,
-    title:
-      "Stylish Storage: Beautiful Mirrored Wardrobes with Sliding Door Designs For You",
-    des: " Maitreyee Chakraborti | September 20, 2024",
-  },
-];
 
 const GlimpseHomes: React.FC = () => {
+  const router = useRouter();
+
+  const handleMoreDetails =  (slug: string) => {
+   
+
+    router.push(`/intorior/${slug}`);
+  
+  };
   return (
     <section className="py-10 md:py-15">
       <MaxWidthWrapper>
@@ -53,8 +33,8 @@ const GlimpseHomes: React.FC = () => {
             </Paragraph>
           </div>
           <div>
-            <Link href="/interiors-faculty"
-              type="button"
+            <Link href=""
+              
               className="flex  font-medium text-red-400 items-center gap-2 pt-10"
             >
               See More <IoIosArrowForward />
@@ -64,9 +44,13 @@ const GlimpseHomes: React.FC = () => {
 
         <div className="grid  grid-cols-1  sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
           {cardData.map((card) => (
+            
             <div
               className="bg-white p-4 rounded-lg mt-4 transform translate hover:scale-[101%] duration-500 shadow-sm hover:shadow-md border"
               key={card.id}
+            >
+              <button type="button"
+            onClick={()=>handleMoreDetails(card.slug)}
             >
               <div>
                 <Image
@@ -81,7 +65,9 @@ const GlimpseHomes: React.FC = () => {
                 </h1>
                 <p className="pb-3 text-gray-600"> {card.des}</p>
               </div>
+              </button>
             </div>
+            
           ))}
         </div>
       </MaxWidthWrapper>
