@@ -3,18 +3,19 @@ import MaxWidthWrapper from "@/components/layout/MaxWidthWrapper";
 
 import Shop1 from "/public/intorior/home1.png";
 import Shop3 from "/public/intorior/home2.png";
-import Shop2 from "/public/intorior/home3.png";
 import Shop4 from "/public/intorior/home4.png";
 
 import Image from "next/image";
 import SubHeading from "./typography/SubHeading";
 import Paragraph from "./typography/Paragraph";
+import Link from "next/link";
 
 type CardData = {
   id: number;
   title: string;
   description: string;
   imageUrl: string;
+  href:string;
 };
 
 const cardData: CardData[] = [
@@ -24,13 +25,7 @@ const cardData: CardData[] = [
     description:
       "Functional kitchen, wardrobe, and storage kitchen, wardrobe, and storage wardrobe, and storage",
     imageUrl: Shop1.src,
-  },
-  {
-    id: 2,
-    title: "Full Home Interiors",
-    description:
-      "Turnkey interior solutions for your home kitchen, wardrobe, and storage wardrobe, and storage",
-    imageUrl: Shop2.src,
+    href:"/interiors-faculty",
   },
   {
     id: 3,
@@ -38,6 +33,7 @@ const cardData: CardData[] = [
     description:
       "Tailored interiors that redefine elegance kitchen, wardrobe, and storage wardrobe, and storage",
     imageUrl: Shop3.src,
+    href:"/others-faculty",
   },
   {
     id: 4,
@@ -45,6 +41,7 @@ const cardData: CardData[] = [
     description:
       "Expert solutions to upgrade your home kitchen, wardrobe, and storage,wardrobe, and storage",
     imageUrl: Shop4.src,
+    href:"/construction-faculty"
   },
 ];
 
@@ -62,10 +59,11 @@ const ShopCard: React.FC = () => {
           decor, we have your back from start to finish.
         </Paragraph>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2  lg:grid-cols-3 xl:grid-cols-4 gap-5 mt-5 mb-5 rounded-md">
+        <div className="grid grid-cols-1 sm:grid-cols-2  lg:grid-cols-3  gap-5 mt-5 mb-5 rounded-md">
           {cardData.map((card) => (
+            <Link href={card.href} key={card.id}>
             <div
-              key={card.id}
+              
               className="group shadow-md border hover:shadow-sm hover:scale-[102%] rounded-[5px] overflow-hidden transition-translate duration-500"
             >
               <div className="block">
@@ -85,6 +83,8 @@ const ShopCard: React.FC = () => {
                 </div>
               </div>
             </div>
+            </Link>
+            
           ))}
         </div>
       </MaxWidthWrapper>

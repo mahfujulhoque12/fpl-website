@@ -1,4 +1,3 @@
-import Link from "next/link";
 import MaxWidthWrapper from "@/components/layout/MaxWidthWrapper";
 import DropdownContent from "./DropdownContent";
 import { ChevronDown, ChevronUp } from "lucide-react";

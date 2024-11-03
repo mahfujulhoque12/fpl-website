@@ -5,6 +5,7 @@ import MainHeading from "@/components/typography/MainHeading";
 import MaxWidthWrapper from "@/components/layout/MaxWidthWrapper";
 import { Button } from "@/components/ui/button";
 import Paragraph from "@/components/typography/Paragraph";
+import Link from 'next/link';
 
 interface Slide {
   id: number;
@@ -75,13 +76,11 @@ const HeroSlider: React.FC = () => {
                 {slide.title}
               </MainHeading>
               <Paragraph className="mb-4">{slide.description}</Paragraph>
-              <Button
-                variant="destructive"
-                className="font-semibold rounded-[27px] py-4 uppercase"
-                size="lg"
+              <Link href="/cotesion"
+                className="font-semibold bg-red-600 transition duration-150 hover:bg-red-700 rounded-[27px] px-4 py-2  uppercase"
               >
                 {slide.action}
-              </Button>
+              </Link>
             </div>
           </div>
         ))}

@@ -1,12 +1,13 @@
-import React from 'react'
-import Cotesion from '@/components/cotesion';
 
-const page = () => {
+import Cotesion from '@/components/cotesion';
+const Page = () => {
+
   return (
     <div>
-        <Cotesion/>
+     
+      <Cotesion />
     </div>
-  )
-}
+  );
+};
 
-export default page
+export default Page;

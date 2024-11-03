@@ -8,22 +8,23 @@ import Review from "@/components/review";
 import GlimpseHomes from "@/components/glimpseHomes";
 
 import HeroSlider from "@/components/section/HeroSlider";
-import InteriorDesignGallery from "@/components/section/InteriorDesignGallery";
 import FaqAccordion from "@/components/faq/FaqAccordion";
 import CallToAction from "@/components/CallToAction";
+import InteriorHome from "@/components/interiorHome";
 
 export default function Home() {
   return (
     <>
       <main>
         <HeroSlider />
-        <InteriorDesignGallery />
+        {/* <InteriorDesignGallery /> */}
+        <Estimate />
         <InteriorDesigns />
         <ShopCard />
         <ProductsVideo />
-        <Estimate />
         <Expreence />
         <Review />
+        <InteriorHome/>
         <GlimpseHomes />
         <FaqAccordion />
         <CallToAction />

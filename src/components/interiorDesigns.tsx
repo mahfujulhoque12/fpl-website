@@ -35,9 +35,9 @@ const Modal: React.FC<{ src: string; onClose: () => void }> = ({ src, onClose })
       <div className="relative bg-white rounded-lg p-4 max-w-[90%] max-h-[90%]">
         <button
           onClick={onClose}
-          className="absolute top-1 right-1 text-gray-600 font-bold text-lg"
+          className="absolute top-0 right-0 text-gray-600 font-bold text-lg"
         >
-          <IoCloseCircleSharp className="text-red-500"/>
+          <IoCloseCircleSharp className="text-red-500" size={20}/>
         </button>
         <Image src={src} alt="Selected image" width={800} height={600} className="rounded-lg w-[700px] h-[400px]" />
       </div>
