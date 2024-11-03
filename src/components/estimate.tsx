@@ -104,7 +104,7 @@ const Estimate: React.FC = () => {
           {cardData.map((card) => (
             <div
               key={card.id}
-              className="p-4 rounded-lg border shadow-md hover:scale-[102%] transform translate duration-500"
+              className="  p-4 rounded-lg border shadow-md hover:scale-[102%] transform translate duration-500"
             >
               <div>
                 <Image

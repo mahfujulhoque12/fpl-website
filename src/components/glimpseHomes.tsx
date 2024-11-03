@@ -22,23 +22,15 @@ const GlimpseHomes: React.FC = () => {
   return (
     <section className="py-10 md:py-15">
       <MaxWidthWrapper>
-        <div className="flex flex-col  justify-between sm:flex-row">
+        <div>
           <div>
-            <SubHeading className="pt-3 font-bold uppercase text-gray-700">
+            <SubHeading className="pt-3 text-center font-bold uppercase text-gray-700">
               Stay updated with trending home interior designs!
             </SubHeading>
-            <Paragraph className="py-3 text-gray-500">
+            <Paragraph className="py-3 text-center text-gray-500">
               Find everything from design fixes to expert tips on Livspace
               magazine
             </Paragraph>
-          </div>
-          <div>
-            <Link href=""
-              
-              className="flex  font-medium text-red-400 items-center gap-2 pt-10"
-            >
-              See More <IoIosArrowForward />
-            </Link>
           </div>
         </div>
 
@@ -54,7 +46,7 @@ const GlimpseHomes: React.FC = () => {
             >
               <div>
                 <Image
-                  src={card.imageUrl}
+                  src={card.imageUrl as string}
                   alt="image"
                   width={600}
                   height={400}
@@ -63,7 +55,7 @@ const GlimpseHomes: React.FC = () => {
                 <h1 className="text-lg text-start py-2 font-semibold  text-gray-700">
                   {card.title}
                 </h1>
-                <p className="pb-3 text-gray-600"> {card.des}</p>
+                <p className="pb-3 text-start text-gray-600"> {card.des}</p>
               </div>
               </button>
             </div>

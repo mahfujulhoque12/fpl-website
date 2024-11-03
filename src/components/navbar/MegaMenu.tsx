@@ -122,7 +122,7 @@ const menuData: MenuDataItem[] = [
   },
  
 
-  { label: "Livespace TV", href: "/others-faculty" },
+  { label: "FPL Updates", href: "/others-faculty" },
 
   { label: "About Us", href: "/about-us" },
   { label: "Blogs", href: "/blogs" },
