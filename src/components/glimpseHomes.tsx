@@ -1,9 +1,7 @@
 "use client"
 import React from "react";
 import MaxWidthWrapper from "@/components/layout/MaxWidthWrapper";
-import { IoIosArrowForward } from "react-icons/io";
 import Image from "next/image";
-import Link from "next/link";
 import SubHeading from "./typography/SubHeading";
 import Paragraph from "./typography/Paragraph";
 import { cardData } from "@/data/intoriorData";

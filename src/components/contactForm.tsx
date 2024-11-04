@@ -27,7 +27,7 @@ const ContactForm = () => {
           <SubHeading className="text-center mt-2 text-gray-700 uppercase font-bold">
             Let’s Chat, Reach Out to us
           </SubHeading>
-          <p className="text-xl font-normal text-gray-600 w-[100%] md:w-[60%] mx-auto text-center mt-2">
+          <p className=" text-base md:text-xl font-normal text-gray-600 w-[100%] md:w-[60%] mx-auto text-center mt-2">
             Have any questions? We’re here to help. Send us a message, and we’ll
             respond within 24 hours.
           </p>
@@ -39,10 +39,10 @@ const ContactForm = () => {
               Message now <FaPaperPlane className="text-[#60D66A]" />
             </p>
 
-            <p className="text-[28px] font-semibold text-gray-100 mt-1">
+            <p className=" text-lg md:text-[28px] font-semibold text-gray-100 mt-1">
               We’d love to hear, form you
             </p>
-            <p className="text-[#C9C9C9] text-xl font-normal mt-3">
+            <p className="text-[#C9C9C9] text-base md:text-xl font-normal mt-3">
               Have any questions? We’re here to help. Send us a message, and
               we’ll respond within 24 hours.
             </p>

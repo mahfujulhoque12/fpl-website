@@ -2,7 +2,7 @@ import MaxWidthWrapper from "@/components/layout/MaxWidthWrapper";
 import DropdownContent from "./DropdownContent";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import { useRouter } from 'next/navigation';
-import { useState } from 'react'; 
+
 
 // Define types for the component props
 interface SubmenuItem {
@@ -33,7 +33,7 @@ const MenuItem: React.FC<MenuItemProps> = ({
   setIsDrawerOpen,
 }) => {
   const router = useRouter();
-  const [loading, setLoading] = useState(false); 
+
 
   const handleClick = () => {
     const activeElement = document.activeElement as HTMLElement | null;
@@ -43,10 +43,7 @@ const MenuItem: React.FC<MenuItemProps> = ({
   const handleLinkClick = async () => {
     setIsDrawerOpen?.(false);
     handleClick();
-    setLoading(true); 
-    await new Promise(resolve => setTimeout(resolve, 1000)); 
-    router.push(href); 
-    setLoading(false); 
+    router.push(href);
   };
 
   return (
@@ -55,16 +52,11 @@ const MenuItem: React.FC<MenuItemProps> = ({
         <button
           className={`${active ? "active" : ""} text-inherit w-full text-[14.5px] font-medium px-4 flex items-center lg:px-[0.7rem]`}
           onClick={handleLinkClick} 
-          disabled={loading} 
         >
-          {loading ? (
-            <div className="flex items-center">
-              <span className="loader mr-2" /> 
-              Loading...
-            </div>
-          ) : (
-            label
-          )}
+         
+          
+           {label}
+          
         </button>
         {nestedMenu && (
           <button

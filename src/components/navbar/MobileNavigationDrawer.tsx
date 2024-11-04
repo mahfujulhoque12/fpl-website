@@ -4,8 +4,8 @@ import MegaMenu from "@/components/navbar/MegaMenu";
 import { cn } from "@/lib/utils";
 import mobileLogo from "/public/fbl-logo.png";
 import Image from "next/image";
-
 import Link from "next/link";
+
 // Define types for the props
 interface MobileNavigationDrawerProps {
   isDrawerOpen: boolean;
@@ -87,8 +87,17 @@ const MobileNavigationDrawer: React.FC<MobileNavigationDrawerProps> = ({
 
           <div  className="flex justify-between">
             <div className="p-2">
-            <Image src={mobileLogo} alt="logo" width={50} height={50} className="  h-auto object-cover" />
+              <Link href="/"  onClick={() => {
+              setIsDrawerOpen(false);
+              // Focus the drawer button when it closes
+              if (drawerButtonRef.current) {
+                drawerButtonRef.current.focus();
+              }
+            }} >
+              <Image src={mobileLogo} alt="logo" width={50} height={50} className="  h-auto object-cover" />
+              </Link>          
             </div>
+
             <button
             onClick={() => {
               setIsDrawerOpen(false);

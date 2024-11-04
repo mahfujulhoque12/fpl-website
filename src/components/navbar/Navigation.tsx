@@ -21,7 +21,7 @@ const Navigation = ({ mobileMenuPos = "left" }: MobileMenuOpeningPosition) => {
     <header className="sticky top-0 lef-0 z-50 h-[60px] bg-white border-b border-[#cacaca]">
       <MaxWidthWrapper>
         <div className="flex items-center justify-between gap-4 h-[60px]">
-         <div className="flex gap-3">
+         <div className="flex  gap-3 p-3">
          <button
             ref={drawerButtonRef}
             className="border-none h-[45px] w-[45] -ml-3 bg-transparent md:hidden"

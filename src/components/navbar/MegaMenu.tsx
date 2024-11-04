@@ -22,7 +22,9 @@ interface MenuDataItem {
 // Correct menuData type to be an array of MenuDataItem
 
 const menuData: MenuDataItem[] = [
+  { label: "Home", href: "/" },
   {
+  
     label: "Interiors Faculty",
     href: "/interiors-faculty",
     nestedMenu: [

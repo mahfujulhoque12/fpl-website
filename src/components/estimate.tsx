@@ -38,7 +38,7 @@ const cardData: CardData[] = [
     title: "Furniture Faculty",
     des: "Know the estimate price for your full home interiors",
     imageUrl: es3.src,
-    href: "#",
+    href: "/others-faculty",
   },
 ];
 
