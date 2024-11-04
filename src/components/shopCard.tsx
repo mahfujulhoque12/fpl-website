@@ -1,51 +1,23 @@
+ "use client"
 import React from "react";
 import MaxWidthWrapper from "@/components/layout/MaxWidthWrapper";
-
-import Shop1 from "/public/intorior/home1.png";
-import Shop3 from "/public/intorior/home2.png";
-import Shop4 from "/public/intorior/home4.png";
 
 import Image from "next/image";
 import SubHeading from "./typography/SubHeading";
 import Paragraph from "./typography/Paragraph";
-import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { cardData } from "@/data/shopData";
 
-type CardData = {
-  id: number;
-  title: string;
-  description: string;
-  imageUrl: string;
-  href:string;
-};
 
-const cardData: CardData[] = [
-  {
-    id: 1,
-    title: "Modular Interiors",
-    description:
-      "Functional kitchen, wardrobe, and storage kitchen, wardrobe, and storage wardrobe, and storage",
-    imageUrl: Shop1.src,
-    href:"/interiors-faculty",
-  },
-  {
-    id: 3,
-    title: "Luxury Interiors",
-    description:
-      "Tailored interiors that redefine elegance kitchen, wardrobe, and storage wardrobe, and storage",
-    imageUrl: Shop3.src,
-    href:"/others-faculty",
-  },
-  {
-    id: 4,
-    title: "Renovations",
-    description:
-      "Expert solutions to upgrade your home kitchen, wardrobe, and storage,wardrobe, and storage",
-    imageUrl: Shop4.src,
-    href:"/construction-faculty"
-  },
-];
 
 const ShopCard: React.FC = () => {
+  const router = useRouter();
+
+  const handleMoreDetails = async (slug: string) => {
+  
+    router.push(`/shop/${slug}`);
+ 
+  };
   return (
     <section className="py-10 md:py-15">
       <MaxWidthWrapper>
@@ -61,7 +33,7 @@ const ShopCard: React.FC = () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2  lg:grid-cols-3  gap-5 mt-5 mb-5 rounded-md">
           {cardData.map((card) => (
-            <Link href={card.href} key={card.id}>
+            <button type="button" onClick={()=>handleMoreDetails(card.slug)}  key={card.slug}>
             <div
               
               className="group shadow-md border hover:shadow-sm hover:scale-[102%] rounded-[5px] overflow-hidden transition-translate duration-500"
@@ -69,7 +41,7 @@ const ShopCard: React.FC = () => {
               <div className="block">
                 <div className="relative w-full h-64">
                   <Image
-                    src={card.imageUrl}
+                    src={card.imageUrl as string}
                     alt="card1-img"
                     className="object-cover rounded-md "
                     fill
@@ -79,11 +51,11 @@ const ShopCard: React.FC = () => {
                   <h3 className="text-xl font-bold text-gray-600">
                     {card.title}
                   </h3>
-                  <p className="text-gray-500 pt-1 pb-4">{card.description}</p>
+                  <p className="text-gray-500 pt-1 pb-4">{card.des}</p>
                 </div>
               </div>
             </div>
-            </Link>
+            </button>
             
           ))}
         </div>

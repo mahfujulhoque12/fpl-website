@@ -47,16 +47,16 @@ const Footer: React.FC = () => {
               <h5 className="mb-3 text-lg font-bold text-gray-100 "> About Us </h5>
               <ul className="space-y-2">
                 <li>
-                  <Link href="#" className="text-normal text-gray-100">Designing timeless spaces</Link>
+                  <Link href="/about-us" className="text-normal text-gray-100">Designing timeless spaces</Link>
                 </li>
                 <li>
-                  <Link href="#" className="text-normal text-gray-100">Innovative architectural solutions</Link>
+                  <Link  href="/about-us" className="text-normal text-gray-100">Innovative architectural solutions</Link>
                 </li>
                 <li>
-                  <Link href="#" className="text-normal text-gray-100">Building your vision</Link>
+                  <Link  href="/about-us" className="text-normal text-gray-100">Building your vision</Link>
                 </li>
                 <li>
-                  <Link href="#" className="text-normal text-gray-100">Crafting sustainable designs</Link>
+                  <Link  href="/about-us" className="text-normal text-gray-100">Crafting sustainable designs</Link>
                 </li>
               </ul>
             </div>
@@ -81,14 +81,14 @@ const Footer: React.FC = () => {
             <div className="w-full md:w-1/4 px-4">
               <h5 className="mb-3 text-lg font-bold text-gray-100">Contact Us</h5>
               <ul className="space-y-2">
-                <li>
-                  <Link href="#" className="flex gap-2 items-center text-gray-100 "><FaSquarePhone size={25}  className="text-normal"/> +00875122</Link>
+                <li className="flex gap-2 items-center text-gray-100 ">
+                   <FaSquarePhone size={25}  className="text-normal"/> +00875122
                 </li>
-                <li>
-                  <Link href="#" className="flex gap-2 items-center text-gray-100 text-normal"><MdEmail size={25}  className="text-gray-100" /> support@gmail.com</Link>
+                <li className="flex gap-2 items-center text-gray-100 text-normal">
+                  <MdEmail size={25}  className="text-gray-100" /> support@gmail.com
                 </li>
-                <li>
-                  <Link href="#" className="flex gap-2 items-center text-normal text-gray-100"><FaLocationDot size={25}  className="text-gray-100"/>  Bonani, Block-E, Road-4</Link>
+                <li className="flex gap-2 items-center text-normal text-gray-100">
+               <FaLocationDot size={25}  className="text-gray-100"/>  Bonani, Block-E, Road-4
                 </li>
               </ul>
             </div>

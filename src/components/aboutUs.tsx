@@ -1,5 +1,6 @@
 import about1 from "/public/about/about.jpg";
 import Image from "next/image";
+import Link from "next/link";
 
 const AboutUs = () => {
   return (
@@ -27,12 +28,12 @@ const AboutUs = () => {
               BC, making it over 2000 years old.
             </p>
             <div className="flex  justify-center md:justify-start w-full">
-              <button
-                type="button"
+              <Link
+                href="/cotesion"
                 className=" gap-2 text-center  flex  bg-[#cf4045] px-4 py-1 mt-2 text-white rounded-md hover:bg-[#c13136] transition-all text-sm duration-150"
               >
                 Get More Info
-              </button>
+              </Link>
             </div>
           </div>
         </div>
