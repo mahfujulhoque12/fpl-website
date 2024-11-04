@@ -105,16 +105,16 @@ const Footer: React.FC = () => {
             </div>
             <div>
               <p className="mb-0">
-                <Link href="#" className="hover:text-teal-400">
+                <Link href="/terms-and-condition">
                   Terms of Service
                 </Link>{" "}
                 |{" "}
-                <Link href="#" className="hover:text-teal-400">
+                <Link href="/privacy-policy">
                   Privacy Policy
                 </Link>{" "}
                 |{" "}
-                <Link href="#" className="hover:text-teal-400">
-                  Cookies
+                <Link href="/cookie">
+                  Cookie Policy
                 </Link>
               </p>
             </div>
