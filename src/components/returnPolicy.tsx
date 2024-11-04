@@ -7,12 +7,12 @@ import returnPolicy from '/public/policy/return.png';
 
 const ReturnPolicy = () =>{
     return(
-        <section className="py-10">
+        <section className="py-10" >
         <MaxWidthWrapper>
         <div>
             <SubHeading className="text-center font-bold text-gray-700 uppercase"> Return Policy </SubHeading>
 
-           <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+           <div className='flex flex-col-reverse md:grid md:grid-cols-2 gap-4'>
             <div>
             <div className="mt-5">
             <h4 className=' text-lg font-semibold text-gray-600'>1.Introduction</h4>
