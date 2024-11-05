@@ -55,7 +55,7 @@ const Review: React.FC = () => {
   };
 
   return (
-    <section className="py-10 md:py-15">
+    <section className=" py-0 md:py-10 ">
       <MaxWidthWrapper>
         <div className="flex flex-col sm:flex-row gap-4 justify-between">
           <SubHeading className="text-gray-700 font-bold uppercase">

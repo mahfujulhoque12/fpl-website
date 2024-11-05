@@ -53,7 +53,8 @@ const WorkHightlight: React.FC = () => {
                     alt="village"
                     className="rounded-md h-[250px]  object-cover"
                   />
-              
+                  <h3 className="text-start text-gray-600 py-1 text-lg font-semibold	">{card.titleTwo}</h3>
+                  <p className="text-start  text-gray-600 text-sm font-normal">{card.desTwo}</p>
                 </div>
                 </button>
               </CarouselItem>

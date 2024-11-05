@@ -60,7 +60,7 @@ const MoreReview: React.FC = () => {
           here we show our more happy clients
         </SubHeading>
 
-        <Carousel className="mt-20">
+        <Carousel className="mt-10 md:mt-20">
           <CarouselContent className="">
             {cardData.map((card) => (
               <CarouselItem
