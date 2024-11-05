@@ -41,6 +41,8 @@ import hotel5 from '/public/high/hotel5.png'
     caseStudies?: string;
     floorPlans?: string;
     designFeatures?: string;
+    titleTwo:string;
+    desTwo:string,
   };
     
     const createSlug = (title: string): string =>
@@ -80,6 +82,8 @@ export const cardData: CardData[] = [
 
     floorPlans:
       "Our thoughtfully designed floor plans offer a clear and detailed view of the spatial layout, allowing you to explore the flow and functionality of each area. Carefully crafted to maximize space efficiency and comfort, our plans balance open-concept designs with purposeful divisions to create versatile living or working environments. Whether you're looking for expansive open spaces or intimate, cozy corners, our floor plans provide a flexible foundation to meet your unique needs, ensuring a seamless experience from concept to completion.",
+      titleTwo:"That is our most valuable projects",
+      desTwo:"click the image and check all the assets. so let's check it out",
 
     caseStudies:
       "Our case studies highlight the journey behind some of our most successful projects, offering a detailed look at the challenges faced, creative solutions implemented, and the results achieved. Each case study explores the unique client needs, site constraints, and design objectives that shaped the final outcome, demonstrating our ability to deliver innovative, tailored solutions. From sustainable architecture to complex structural designs, these examples showcase our commitment to excellence and our expertise in turning architectural visions into reality.",
@@ -88,6 +92,7 @@ export const cardData: CardData[] = [
       "At Floor Planer, sustainability is at the heart of our design approach. We prioritize eco-friendly materials, energy-efficient systems, and green building practices to minimize the environmental impact of our projects. By integrating features such as solar panels, rainwater harvesting systems, and natural ventilation, we ensure that our buildings not only reduce energy consumption but also promote healthier living environments. Our commitment to sustainability extends to every stage of the design process, from the selection of renewable materials to the implementation of smart technologies that support a more sustainable future.",
       
   },
+
   {
       id:2,
       imageUrl:high10.src, 
@@ -123,6 +128,8 @@ export const cardData: CardData[] = [
 
     sustainabilityFeatures:
       "At Floor Planer, sustainability is at the heart of our design approach. We prioritize eco-friendly materials, energy-efficient systems, and green building practices to minimize the environmental impact of our projects. By integrating features such as solar panels, rainwater harvesting systems, and natural ventilation, we ensure that our buildings not only reduce energy consumption but also promote healthier living environments. Our commitment to sustainability extends to every stage of the design process, from the selection of renewable materials to the implementation of smart technologies that support a more sustainable future.",
+      titleTwo:"That is our most valuable projects",
+      desTwo:"click the image and check all the assets. so let's check it out",
       
   },
   {
@@ -157,6 +164,8 @@ export const cardData: CardData[] = [
 
     caseStudies:
       "Our case studies highlight the journey behind some of our most successful projects, offering a detailed look at the challenges faced, creative solutions implemented, and the results achieved. Each case study explores the unique client needs, site constraints, and design objectives that shaped the final outcome, demonstrating our ability to deliver innovative, tailored solutions. From sustainable architecture to complex structural designs, these examples showcase our commitment to excellence and our expertise in turning architectural visions into reality.",
+      titleTwo:"That is our most valuable projects",
+      desTwo:"click the image and check all the assets. so let's check it out",
 
     sustainabilityFeatures:
       "At Floor Planer, sustainability is at the heart of our design approach. We prioritize eco-friendly materials, energy-efficient systems, and green building practices to minimize the environmental impact of our projects. By integrating features such as solar panels, rainwater harvesting systems, and natural ventilation, we ensure that our buildings not only reduce energy consumption but also promote healthier living environments. Our commitment to sustainability extends to every stage of the design process, from the selection of renewable materials to the implementation of smart technologies that support a more sustainable future.",
@@ -196,6 +205,8 @@ export const cardData: CardData[] = [
 
     sustainabilityFeatures:
       "At Floor Planer, sustainability is at the heart of our design approach. We prioritize eco-friendly materials, energy-efficient systems, and green building practices to minimize the environmental impact of our projects. By integrating features such as solar panels, rainwater harvesting systems, and natural ventilation, we ensure that our buildings not only reduce energy consumption but also promote healthier living environments. Our commitment to sustainability extends to every stage of the design process, from the selection of renewable materials to the implementation of smart technologies that support a more sustainable future.",
+      titleTwo:"That is our most valuable projects",
+      desTwo:"click the image and check all the assets. so let's check it out",
   },
   {
     id:5,
@@ -232,6 +243,8 @@ export const cardData: CardData[] = [
 
   sustainabilityFeatures:
     "At Floor Planer, sustainability is at the heart of our design approach. We prioritize eco-friendly materials, energy-efficient systems, and green building practices to minimize the environmental impact of our projects. By integrating features such as solar panels, rainwater harvesting systems, and natural ventilation, we ensure that our buildings not only reduce energy consumption but also promote healthier living environments. Our commitment to sustainability extends to every stage of the design process, from the selection of renewable materials to the implementation of smart technologies that support a more sustainable future.",
+    titleTwo:"That is our most valuable projects",
+      desTwo:"click the image and check all the assets. so let's check it out",
 }
 ,
 {
@@ -269,5 +282,7 @@ caseStudies:
 
 sustainabilityFeatures:
   "At Floor Planer, sustainability is at the heart of our design approach. We prioritize eco-friendly materials, energy-efficient systems, and green building practices to minimize the environmental impact of our projects. By integrating features such as solar panels, rainwater harvesting systems, and natural ventilation, we ensure that our buildings not only reduce energy consumption but also promote healthier living environments. Our commitment to sustainability extends to every stage of the design process, from the selection of renewable materials to the implementation of smart technologies that support a more sustainable future.",
+  titleTwo:"That is our most valuable projects",
+      desTwo:"click the image and check all the assets. so let's check it out",
 }
 ]

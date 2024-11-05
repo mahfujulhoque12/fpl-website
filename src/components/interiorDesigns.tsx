@@ -56,7 +56,7 @@ const InteriorDesigns: React.FC = () => {
   return (
     <section>
       <MaxWidthWrapper>
-        <div className="flex flex-col md:flex-row justify-between mt-10">
+        <div className="flex flex-col md:flex-row justify-between mt-0 md:mt-10">
           <div className="mb-4 sm:mb-0">
             <SubHeading className="py-3 uppercase font-bold text-gray-700">
               Inspiration for home interior designs

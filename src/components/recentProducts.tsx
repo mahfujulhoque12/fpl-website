@@ -18,33 +18,47 @@ import { FaPlay } from "react-icons/fa6";
 // Define the video data type
 type VideoData = {
   url: string;
-  thumbnail: string; // Local image path
+  thumbnail: string;
+  title :string;
+  des:string;
 };
 
 const videoData: VideoData[] = [
   {
     url: "https://www.youtube.com/embed/m55PTVUrlnA",
     thumbnail: "/commercial/commercial1.png",
+    title:"Our Resent Project in Dhaka",
+    des:"Click the video and see what we made and how we made. so let's check it out",
   },
   {
     url: "https://www.youtube.com/embed/JblrN5oNse4",
     thumbnail:  "/hotel/hotel3.png",
+    title:"Our Resent Project in Comilla",
+    des:"Click the video and see what we made and how we made. so let's check it out",
   },
   {
     url: "https://www.youtube.com/embed/bNnhr_bIR9c",
     thumbnail:  "/resort/resort1.png",
+    title:"Our Resent Project in Chittagong",
+    des:"Click the video and see what we made and how we made. so let's check it out",
   },
   {
     url: "https://www.youtube.com/embed/WlxcujsvcIY?start=839",
     thumbnail:  "/reception/reciption1.png",
+    title:"Our Resent Project in Dhaka",
+    des:"Click the video and see what we made and how we made. so let's check it out",
   },
   {
     url: "https://www.youtube.com/embed/bNnhr_bIR9c",
     thumbnail: "/celing/celing2.png",
+    title:"Our Resent Project in Dhaka",
+    des:"Click the video and see what we made and how we made. so let's check it out",
   },
   {
     url: "https://www.youtube.com/embed/WlxcujsvcIY?start=839",
     thumbnail:  "/celing/wall2.png",
+    title:"Our Resent Project in Dhaka",
+    des:"Click the video and see what we made and how we made. so let's check it out",
   },
 ];
 
@@ -70,7 +84,7 @@ const RecentProducts: React.FC = () => {
         </SubHeading>
         <Carousel>
           <CarouselContent>
-            {videoData.map(({ url, thumbnail }, index) => (
+            {videoData.map(({ url, thumbnail,title,des }, index) => (
               <CarouselItem
                 key={index}
                 className="basis-full sm:basis-1/2 lg:basis-1/3"
@@ -82,7 +96,7 @@ const RecentProducts: React.FC = () => {
                     alt={`Video thumbnail ${index + 1}`}
                     width={700}
                     height={300}
-                    className="rounded-md object-cover  h-[300px]"
+                    className="rounded-md object-cover  h-[250px]"
                   />
                     <div className="absolute top-[45%] left-[45%] w-12 h-12 bg-red-600 rounded-full flex items-center justify-center">
     
@@ -90,6 +104,8 @@ const RecentProducts: React.FC = () => {
 
 
               </div>
+              <h3 className="text-gray-600 py-1 text-lg font-semibold	">{title}</h3>
+              <p className="text-gray-600 text-sm font-normal">{des}</p>
                 </div>
               </CarouselItem>
             ))}

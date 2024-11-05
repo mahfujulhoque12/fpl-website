@@ -18,33 +18,47 @@ import { FaPlay } from "react-icons/fa6";
 // Define the video data type
 type VideoData = {
   url: string;
-  thumbnail: string; // Local image path
+  thumbnail: string; 
+  title :string;
+  des:string;
 };
 
 const videoData: VideoData[] = [
   {
     url: "https://www.youtube.com/embed/m55PTVUrlnA",
     thumbnail: "/familyV/family1.png",
+    title:"Our Honorable clinet say",
+    des:"Click the video and explore what say our honorable clinet",
   },
   {
     url: "https://www.youtube.com/embed/JblrN5oNse4",
     thumbnail:  "/familyV/family2.png",
+    title:"Our Honorable clinet say",
+    des:"Click the video and explore what say our honorable clinet",
   },
   {
     url: "https://www.youtube.com/embed/bNnhr_bIR9c",
     thumbnail:  "/familyV/family3.png",
+    title:"Our Honorable clinet say",
+    des:"Click the video and explore what say our honorable clinet",
   },
   {
     url: "https://www.youtube.com/embed/WlxcujsvcIY?start=839",
     thumbnail:  "/familyV/family4.png",
+    title:"Our Honorable clinet say",
+    des:"Click the video and explore what say our honorable clinet",
   },
   {
     url: "https://www.youtube.com/embed/bNnhr_bIR9c",
     thumbnail: "/familyV/family5.png",
+    title:"Our Honorable clinet say",
+    des:"Click the video and explore what say our honorable clinet",
   },
   {
     url: "https://www.youtube.com/embed/WlxcujsvcIY?start=839",
     thumbnail:  "/familyV/family1.png",
+    title:"Our Honorable clinet say",
+    des:"Click the video and explore what say our honorable clinet",
   },
 ];
 
@@ -70,7 +84,7 @@ const MoreVideo: React.FC = () => {
         </SubHeading>
         <Carousel>
           <CarouselContent>
-            {videoData.map(({ url, thumbnail }, index) => (
+            {videoData.map(({ url, thumbnail,title,des }, index) => (
               <CarouselItem
                 key={index}
                 className="basis-full sm:basis-1/2 lg:basis-1/3"
@@ -82,7 +96,7 @@ const MoreVideo: React.FC = () => {
                     alt={`Video thumbnail ${index + 1}`}
                     width={700}
                     height={300}
-                    className="rounded-md object-cover  h-[300px]"
+                    className="rounded-md object-cover  h-[250px]"
                   />
                     <div className="absolute top-[45%] left-[45%] w-12 h-12 bg-red-600 rounded-full flex items-center justify-center">
     
@@ -90,7 +104,10 @@ const MoreVideo: React.FC = () => {
 
 
               </div>
+              <h3 className="text-gray-600 py-1 text-lg font-semibold	">{title}</h3>
+              <p className="text-gray-600 text-sm font-normal">{des}</p>
                 </div>
+              
               </CarouselItem>
             ))}
           </CarouselContent>

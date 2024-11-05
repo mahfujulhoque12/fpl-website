@@ -65,7 +65,7 @@ const ProductsVideo: React.FC = () => {
   };
 
   return (
-    <section className="py-10 md:py-15">
+    <section className=" py-0 md:py-10">
       <MaxWidthWrapper>
         <SubHeading className="text-gray-700 uppercase font-bold text-center pb-10">
           A Few Facts About Our Company

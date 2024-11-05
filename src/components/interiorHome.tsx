@@ -31,7 +31,7 @@ const InteriorHome = () => {
   const bedRoomCard = cardData.filter((card) => card.id >= 7 && card.id <= 12);
 
   return (
-    <section className="py-10 md:py-15">
+    <section className="py-0 md:py-10">
       <MaxWidthWrapper>
         <SubHeading className="text-center text-gray-600 font-bold uppercase">
         Your Ultimate Destination for Interior Design
