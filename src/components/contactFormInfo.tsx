@@ -200,7 +200,7 @@ const ContactFormInfo: React.FC = () => {
           />
           <label className="text-base font-normal">
             I agree to your{" "}
-            <Link href="#" className="text-[#60D66A] underline">
+            <Link href="/privacy-policy" className="text-red-600 underline">
               privacy policy
             </Link>
           </label>

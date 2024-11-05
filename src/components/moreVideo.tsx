@@ -11,7 +11,8 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { IoClose } from "react-icons/io5";
-import { PiGooglePlayLogoFill } from "react-icons/pi";
+import { FaPlay } from "react-icons/fa6";
+
 
 
 // Define the video data type
@@ -23,27 +24,27 @@ type VideoData = {
 const videoData: VideoData[] = [
   {
     url: "https://www.youtube.com/embed/m55PTVUrlnA",
-    thumbnail: "/cabinet/cabinet2.png",
+    thumbnail: "/familyV/family1.png",
   },
   {
     url: "https://www.youtube.com/embed/JblrN5oNse4",
-    thumbnail: "/cabinet/cabinet3.png",
+    thumbnail:  "/familyV/family2.png",
   },
   {
     url: "https://www.youtube.com/embed/bNnhr_bIR9c",
-    thumbnail: "/cabinet/cabinet4.png",
+    thumbnail:  "/familyV/family3.png",
   },
   {
     url: "https://www.youtube.com/embed/WlxcujsvcIY?start=839",
-    thumbnail: "/cabinet/cabinet5.png",
+    thumbnail:  "/familyV/family4.png",
   },
   {
     url: "https://www.youtube.com/embed/bNnhr_bIR9c",
-    thumbnail: "/cabinet/cabinet6.png",
+    thumbnail: "/familyV/family5.png",
   },
   {
     url: "https://www.youtube.com/embed/WlxcujsvcIY?start=839",
-    thumbnail: "/cabinet/cabinet1.png",
+    thumbnail:  "/familyV/family1.png",
   },
 ];
 
@@ -83,9 +84,9 @@ const MoreVideo: React.FC = () => {
                     height={300}
                     className="rounded-md object-cover  h-[300px]"
                   />
-                    <div className="absolute top-[45%] left-[45%] w-12 h-12 bg-black rounded-full flex items-center justify-center">
+                    <div className="absolute top-[45%] left-[45%] w-12 h-12 bg-red-600 rounded-full flex items-center justify-center">
     
-                <PiGooglePlayLogoFill className="text-white" size={24}/>
+                <FaPlay className="text-white" size={24}/>
 
 
               </div>

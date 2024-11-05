@@ -26,6 +26,7 @@ import other11 from "/public/others/others11.png";
 import other12 from "/public/others/others12.png";
 import other13 from "/public/others/others13.png";
 import other14 from "/public/others/others14.png";
+import Link from "next/link";
 
 type CardData = {
   id: number;
@@ -119,6 +120,7 @@ const OthersPic = () => {
                 key={card.id}
                 className="basis-full sm:basis-1/2 lg:basis-1/3"
               >
+                <Link href="/cotesion">
                 <div className="border p-4 shadow-md  mb-2 rounded-lg hover:scale-[102%] transition translate duration-500 h-full flex flex-col">
                   <Image
                     src={card.imageUrl as string}
@@ -131,6 +133,7 @@ const OthersPic = () => {
 
                   <div className="flex  justify-start w-full"></div>
                 </div>
+                </Link>
               </CarouselItem>
             ))}
           </CarouselContent>

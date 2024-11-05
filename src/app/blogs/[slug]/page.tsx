@@ -125,7 +125,7 @@ const Page: FC<ParamsProps> = ({ params }) => {
 
                   <div className="mt-6 flex flex-col md:flex-row gap-5 p-4 rounded-md bg-[#FAFAFA] items-start">
                     <div className="flex justify-center items-center min-h-[100px]">
-                      <div className="flex flex-col md:flex-row gap-4 items-center md:items-start">
+                      <div className="flex flex-col justify-center ms-[140px] md:ms-0 md:flex-row gap-4 items-center md:items-start">
                         <Image
                           src={client}
                           width={50}
@@ -133,25 +133,24 @@ const Page: FC<ParamsProps> = ({ params }) => {
                           alt="img"
                           className="rounded-full w-[50px] h-[50px]"
                         />
-                        <div className="text-center md:text-left">
-                          <p className="text-sm font-semibold text-gray-700">
-                            Sarah Thompson
-                          </p>
-                          <p className="text-xs font-normal text-gray-600">
-                            Founder and CEO
-                          </p>
-                          <div className="flex justify-center md:justify-start mt-2 gap-2">
-                            <Link href="#">
-                              <FaFacebook className="text-[#243045]" />
-                            </Link>
-                            <Link href="#">
-                              <LuInstagram className="text-[#243045]" />
-                            </Link>
-                            <Link href="#">
-                              <FaLinkedin className="text-[#243045]" />
-                            </Link>
-                          </div>
-                        </div>
+                       <div className="flex flex-col items-center md:items-start justify-center text-center md:text-left">
+  <div>
+    <p className="text-sm font-semibold text-gray-700">Sarah Thompson</p>
+    <p className="text-xs font-normal text-gray-600">Founder and CEO</p>
+  </div>
+  <div className="flex justify-center md:justify-start mt-2 gap-2">
+    <Link href="#">
+      <FaFacebook className="text-[#243045]" />
+    </Link>
+    <Link href="#">
+      <LuInstagram className="text-[#243045]" />
+    </Link>
+    <Link href="#">
+      <FaLinkedin className="text-[#243045]" />
+    </Link>
+  </div>
+</div>
+
                       </div>
                     </div>
 
@@ -185,14 +184,14 @@ const Page: FC<ParamsProps> = ({ params }) => {
               <Link
                 href={`/blogs/${card.slug}`} 
                 key={card.id}
-                className="bg-[#FFFFFF] p-4 drop-shadow-md rounded-md flex gap-4 mb-6 cursor-pointer"
+                className="bg-[#FFFFFF] p-4 drop-shadow-md rounded-md flex gap-4 mb-6 cursor-pointer flex flex-row md:flex-col lg:flex-row"
               >
                 <Image
                   src={card.imageUrl as string}
                   width={300}
                   height={200}
                   alt="img"
-                  className="w-[200px] h-[96px] rounded-md"
+                  className="w-full max-h-[96px] object-cover h-auto rounded-md"
                 />
                 <div>
                   <p className="text-sm font-semibold text-gray-600">{card.title}</p>
