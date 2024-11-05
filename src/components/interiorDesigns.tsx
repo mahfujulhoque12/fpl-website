@@ -1,43 +1,37 @@
-"use client"
+"use client";
 import React, { useState } from "react";
 import MaxWidthWrapper from "@/components/layout/MaxWidthWrapper";
 import { IoIosArrowForward } from "react-icons/io";
-import Slider1 from "/public/slide/slide1.png";
-import Slider2 from "/public/slide/slide12.png";
-import Slider3 from"/public/slide/slide2.png";
-import Slider4 from "/public/slide/slide11.png";
-import Slider5 from "/public/slide/slide3.png";
-import Slider6 from "/public/slide/slide7.png";
-import Slider7 from"/public/slide/slide4.png";
-import Slider8 from "/public/slide/slide9.png";
-import Slider9 from "/public/slide/slide5.png";
-import Slider10 from "/public/slide/slide8.png";
-import Slider11 from"/public/slide/slide6.png";
-import Slider12 from"/public/slide/slide7.png";
-
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import Image from "next/image";
 import SubHeading from "./typography/SubHeading";
 import Paragraph from "./typography/Paragraph";
 import { IoCloseCircleSharp } from "react-icons/io5";
 import Link from "next/link";
 
+// Array of slider images
+const sliderImages = [
+  { src: "/slide/slide1.png", alt: "Slider 1" },
+  { src: "/slide/slide12.png", alt: "Slider 2" },
+  { src: "/slide/slide2.png", alt: "Slider 3" },
+  { src: "/slide/slide11.png", alt: "Slider 4" },
+  { src: "/slide/slide3.png", alt: "Slider 5" },
+  { src: "/slide/slide7.png", alt: "Slider 6" },
+  { src: "/slide/slide4.png", alt: "Slider 7" },
+  { src: "/slide/slide9.png", alt: "Slider 8" },
+  { src: "/slide/slide5.png", alt: "Slider 9" },
+  { src: "/slide/slide8.png", alt: "Slider 10" },
+  { src: "/slide/slide6.png", alt: "Slider 11" },
+  { src: "/slide/slide7.png", alt: "Slider 12" },
+];
+
 // Modal Component
 const Modal: React.FC<{ src: string; onClose: () => void }> = ({ src, onClose }) => {
   return (
     <div onClick={onClose} className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
       <div className="relative bg-white rounded-lg p-4 max-w-[90%] max-h-[90%]">
-        <button
-          onClick={onClose}
-          className="absolute top-0 right-0 text-gray-600 font-bold text-lg"
-        >
-          <IoCloseCircleSharp className="text-red-500" size={20}/>
+        <button onClick={onClose} className="absolute top-0 right-0 text-gray-600 font-bold text-lg">
+          <IoCloseCircleSharp className="text-red-500" size={20} />
         </button>
         <Image src={src} alt="Selected image" width={800} height={600} className="rounded-lg w-[700px] h-[400px]" />
       </div>
@@ -71,10 +65,8 @@ const InteriorDesigns: React.FC = () => {
               Give your home a new look with these interior design ideas curated for you
             </Paragraph>
           </div>
-          <div>
-            <Link href = "/interiors-faculty"
-              className="font-medium text-red-400 flex items-center gap-2"
-            >
+          <div className="flex justify-end sm:justify-start">
+            <Link href="/interiors-faculty" className="font-medium text-red-400 flex items-center gap-2">
               View All <IoIosArrowForward />
             </Link>
           </div>
@@ -83,121 +75,121 @@ const InteriorDesigns: React.FC = () => {
         <Carousel>
           <CarouselContent>
             <CarouselItem>
-              <div className="flex  lg:flex-row gap-2 mt-4">
-                <div className="basis-full md:basis-1/2 " onClick={() => openModal(Slider1.src)}>
+              <div className="flex gap-2 mt-4">
+                <div className="basis-full md:basis-1/2" onClick={() => openModal(sliderImages[0].src)}>
                   <Image
-                    src={Slider1.src}
+                    src={sliderImages[0].src}
                     className="rounded-[5px] h-auto max-h-[180px] cursor-pointer object-cover"
                     width={700}
                     height={350}
-                    alt="slider1"
+                    alt={sliderImages[0].alt}
                   />
                 </div>
-                <div className="basis-full lg:basis-1/3" onClick={() => openModal(Slider2.src)}>
+                <div className="basis-full lg:basis-1/3" onClick={() => openModal(sliderImages[1].src)}>
                   <Image
-                    src={Slider2.src}
-                    className="rounded-[5px]   max-h-[180px] h-auto cursor-pointer "
-                    width={700}
-                    height={350}
-                    alt="slider2"
-                  />
-                </div>
-                <div className="basis-full sm:basis-1/3" onClick={() => openModal(Slider3.src)}>
-                  <Image
-                    src={Slider3.src}
-                    className="rounded-[5px]  max-h-[180px] h-auto cursor-pointer  "
-                    width={700}
-                    height={350}
-                    alt="slider3"
-                  />
-                </div>
-              </div>
-              <div className="flex flex-col lg:flex-row gap-2 mt-4">
-                <div className="basis-full sm:basis-1/4" onClick={() => openModal(Slider4.src)}>
-                  <Image
-                    src={Slider4.src}
+                    src={sliderImages[1].src}
                     className="rounded-[5px] max-h-[180px] h-auto cursor-pointer"
                     width={700}
                     height={350}
-                    alt="slider4"
+                    alt={sliderImages[1].alt}
                   />
                 </div>
-                <div className="basis-full lg:basis-1/2" onClick={() => openModal(Slider5.src)}>
+                <div className="basis-full sm:basis-1/3" onClick={() => openModal(sliderImages[2].src)}>
                   <Image
-                    src={Slider5.src}
-                    className="rounded-[5px] basis-full lg:basis-1/2 max-h-[180px] h-auto cursor-pointer object-cover"
+                    src={sliderImages[2].src}
+                    className="rounded-[5px] max-h-[180px] h-auto cursor-pointer"
                     width={700}
                     height={350}
-                    alt="slider5"
+                    alt={sliderImages[2].alt}
                   />
                 </div>
-                <div className="basis-full lg:basis-1/4" onClick={() => openModal(Slider6.src)}>
+              </div>
+              <div className="flex gap-2 mt-4">
+                <div className="basis-full sm:basis-1/4" onClick={() => openModal(sliderImages[3].src)}>
                   <Image
-                    src={Slider6.src}
-                    className="rounded-[5px] max-h-[180px] h-auto cursor-pointer "
+                    src={sliderImages[3].src}
+                    className="rounded-[5px] max-h-[180px] h-auto cursor-pointer"
                     width={700}
                     height={350}
-                    alt="slider6"
+                    alt={sliderImages[3].alt}
+                  />
+                </div>
+                <div className="basis-full lg:basis-1/2" onClick={() => openModal(sliderImages[4].src)}>
+                  <Image
+                    src={sliderImages[4].src}
+                    className="rounded-[5px] max-h-[180px] h-auto cursor-pointer object-cover"
+                    width={700}
+                    height={350}
+                    alt={sliderImages[4].alt}
+                  />
+                </div>
+                <div className="basis-full lg:basis-1/4" onClick={() => openModal(sliderImages[5].src)}>
+                  <Image
+                    src={sliderImages[5].src}
+                    className="rounded-[5px] max-h-[180px] h-auto cursor-pointer"
+                    width={700}
+                    height={350}
+                    alt={sliderImages[5].alt}
                   />
                 </div>
               </div>
             </CarouselItem>
             <CarouselItem>
-              <div className="flex  lg:flex-row gap-2 mt-4">
-                <div className="basis-full md:basis-1/2 " onClick={() => openModal(Slider1.src)}>
+              <div className="flex gap-2 mt-4">
+                <div className="basis-full md:basis-1/2" onClick={() => openModal(sliderImages[6].src)}>
                   <Image
-                    src={Slider7.src}
+                    src={sliderImages[6].src}
                     className="rounded-[5px] h-auto max-h-[180px] cursor-pointer object-cover"
                     width={700}
                     height={350}
-                    alt="slider1"
+                    alt={sliderImages[6].alt}
                   />
                 </div>
-                <div className="basis-full lg:basis-1/3" onClick={() => openModal(Slider2.src)}>
+                <div className="basis-full lg:basis-1/3" onClick={() => openModal(sliderImages[7].src)}>
                   <Image
-                    src={Slider8.src}
-                    className="rounded-[5px]   max-h-[180px] h-auto cursor-pointer "
-                    width={700}
-                    height={350}
-                    alt="slider2"
-                  />
-                </div>
-                <div className="basis-full sm:basis-1/3" onClick={() => openModal(Slider3.src)}>
-                  <Image
-                    src={Slider9.src}
-                    className="rounded-[5px]  max-h-[180px] h-auto cursor-pointer  "
-                    width={700}
-                    height={350}
-                    alt="slider3"
-                  />
-                </div>
-              </div>
-              <div className="flex flex-col lg:flex-row gap-2 mt-4">
-                <div className="basis-full sm:basis-1/4" onClick={() => openModal(Slider4.src)}>
-                  <Image
-                    src={Slider10.src}
+                    src={sliderImages[7].src}
                     className="rounded-[5px] max-h-[180px] h-auto cursor-pointer"
                     width={700}
                     height={350}
-                    alt="slider4"
+                    alt={sliderImages[7].alt}
                   />
                 </div>
-                <div className="basis-full lg:basis-1/2" onClick={() => openModal(Slider5.src)}>
+                <div className="basis-full sm:basis-1/3" onClick={() => openModal(sliderImages[8].src)}>
                   <Image
-                    src={Slider11.src}
-                    className="rounded-[5px] basis-full lg:basis-1/2 max-h-[180px] h-auto cursor-pointer object-cover"
+                    src={sliderImages[8].src}
+                    className="rounded-[5px] max-h-[180px] h-auto cursor-pointer"
                     width={700}
                     height={350}
-                    alt="slider5"
+                    alt={sliderImages[8].alt}
                   />
                 </div>
-                <div className="basis-full lg:basis-1/4" onClick={() => openModal(Slider6.src)}>
+              </div>
+              <div className="flex gap-2 mt-4">
+                <div className="basis-full sm:basis-1/4" onClick={() => openModal(sliderImages[9].src)}>
                   <Image
-                    src={Slider12.src}
-                    className="rounded-[5px] max-h-[180px] h-auto cursor-pointer "
+                    src={sliderImages[9].src}
+                    className="rounded-[5px] max-h-[180px] h-auto cursor-pointer"
                     width={700}
                     height={350}
-                    alt="slider6"
+                    alt={sliderImages[9].alt}
+                  />
+                </div>
+                <div className="basis-full lg:basis-1/2" onClick={() => openModal(sliderImages[10].src)}>
+                  <Image
+                    src={sliderImages[10].src}
+                    className="rounded-[5px] max-h-[180px] h-auto cursor-pointer object-cover"
+                    width={700}
+                    height={350}
+                    alt={sliderImages[10].alt}
+                  />
+                </div>
+                <div className="basis-full lg:basis-1/4" onClick={() => openModal(sliderImages[11].src)}>
+                  <Image
+                    src={sliderImages[11].src}
+                    className="rounded-[5px] max-h-[180px] h-auto cursor-pointer"
+                    width={700}
+                    height={350}
+                    alt={sliderImages[11].alt}
                   />
                 </div>
               </div>
@@ -207,7 +199,6 @@ const InteriorDesigns: React.FC = () => {
           <CarouselNext />
         </Carousel>
       </MaxWidthWrapper>
-
 
       {isModalOpen && <Modal src={selectedImage} onClose={closeModal} />}
     </section>

@@ -15,8 +15,6 @@ import { FaPlay } from "react-icons/fa6";
 
 
 
-
-
 // Define the video data type
 type VideoData = {
   url: string;
@@ -26,31 +24,31 @@ type VideoData = {
 const videoData: VideoData[] = [
   {
     url: "https://www.youtube.com/embed/m55PTVUrlnA",
-    thumbnail: "/blog/blog2.png",
+    thumbnail: "/commercial/commercial1.png",
   },
   {
     url: "https://www.youtube.com/embed/JblrN5oNse4",
-    thumbnail:"/blog/blog3.png",
+    thumbnail:  "/hotel/hotel3.png",
   },
   {
     url: "https://www.youtube.com/embed/bNnhr_bIR9c",
-    thumbnail: "/blog/blog4.png",
+    thumbnail:  "/resort/resort1.png",
   },
   {
     url: "https://www.youtube.com/embed/WlxcujsvcIY?start=839",
-    thumbnail: "/blog/blog5.png",
+    thumbnail:  "/reception/reciption1.png",
   },
   {
     url: "https://www.youtube.com/embed/bNnhr_bIR9c",
-    thumbnail: "/blog/blog6.png",
+    thumbnail: "/celing/celing2.png",
   },
   {
     url: "https://www.youtube.com/embed/WlxcujsvcIY?start=839",
-    thumbnail: "/blog/blog7.png",
+    thumbnail:  "/celing/wall2.png",
   },
 ];
 
-const ProductsVideo: React.FC = () => {
+const RecentProducts: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [activeVideoUrl, setActiveVideoUrl] = useState<string | null>(null);
 
@@ -68,30 +66,30 @@ const ProductsVideo: React.FC = () => {
     <section className="py-10 md:py-15">
       <MaxWidthWrapper>
         <SubHeading className="text-gray-700 uppercase font-bold text-center pb-10">
-          A Few Facts About Our Company
+          Our Recent Projects 
         </SubHeading>
         <Carousel>
           <CarouselContent>
             {videoData.map(({ url, thumbnail }, index) => (
               <CarouselItem
                 key={index}
-                className="basis-full md:basis-1/2 lg:basis-1/3"
+                className="basis-full sm:basis-1/2 lg:basis-1/3"
                 onClick={() => openModal(url)}
               >
-                <div className="p-4 relative z-10 shadow-md border rounded-lg hover:shadow-lg transition-shadow duration-300 mb-2 cursor-pointer">
+                <div className="p-4 relative shadow-md z-10 border rounded-lg hover:shadow-lg transition-shadow duration-300 mb-2 cursor-pointer">
                   <Image
                     src={thumbnail}
                     alt={`Video thumbnail ${index + 1}`}
                     width={700}
                     height={300}
-                    className="rounded-md object-cover h-[300px]"
+                    className="rounded-md object-cover  h-[300px]"
                   />
-                 <div className="absolute top-[45%] left-[45%] w-12 h-12 bg-red-600 rounded-full flex items-center justify-center">
-                <FaPlay className="text-white" size={24} />
+                    <div className="absolute top-[45%] left-[45%] w-12 h-12 bg-red-600 rounded-full flex items-center justify-center">
+    
+                <FaPlay className="text-white" size={24}/>
+
 
               </div>
-
-
                 </div>
               </CarouselItem>
             ))}
@@ -132,4 +130,4 @@ const ProductsVideo: React.FC = () => {
   );
 };
 
-export default ProductsVideo;
+export default RecentProducts;

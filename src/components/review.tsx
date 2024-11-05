@@ -61,14 +61,17 @@ const Review: React.FC = () => {
           <SubHeading className="text-gray-700 font-bold uppercase">
             Check out some of our customer reviews
           </SubHeading>
-          <Link href ="others-faculty"
+
+         <div className="flex justify-end sm:justify-start">
+           <Link href ="/others-faculty"
             className="font-medium text-red-400 flex items-center gap-2"
           >
             View All <IoIosArrowForward />
           </Link>
+          </div>
         </div>
 
-        <Carousel className="mt-20">
+        <Carousel className=" mt-10 md:mt-20">
           <CarouselContent className="">
             {cardData.map((card) => (
               <CarouselItem key={card.id} className="basis-full sm:basis-1/2 lg:basis-1/3">
