@@ -34,9 +34,9 @@ const KitchenCommercial = () => {
         <SubHeading className="text-center text-gray-600 font-bold uppercase">
           Kitchen Commercial
         </SubHeading>
-        <Paragraph className="text-center py-5 w-full md:w-[500px] flex mx-auto">
-          You can choose your favourite room from here. We can build your dream
-          room at a minimum cost.
+        <Paragraph className="text-center py-5 w-full md:w-[80%] flex mx-auto">
+          
+      Kitchen Commercial is a highly efficient and durable kitchen space designed to meet the demands of professional cooking, offering top-tier appliances and layouts for seamless food preparation in a fast-paced environment.
         </Paragraph>
         <Carousel>
           <CarouselContent>

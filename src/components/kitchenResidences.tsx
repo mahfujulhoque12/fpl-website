@@ -33,9 +33,9 @@ const KitchenResidences = () => {
         <SubHeading className="text-center text-gray-600 font-bold uppercase">
           Kitchen Residences
         </SubHeading>
-        <Paragraph className="text-center py-5 w-full md:w-[500px] flex mx-auto">
-          You can choise your favourit room from here. we can bulid your dream
-          room at minimun cost
+        <Paragraph className="text-center py-5 w-full md:w-[80%] flex mx-auto">
+          
+Kitchen Residences is a modern and functional space where culinary creativity meets comfort, designed to serve as the heart of the home for cooking, dining, and family gatherings.
         </Paragraph>
         <Carousel>
           <CarouselContent>

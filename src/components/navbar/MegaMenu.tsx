@@ -32,50 +32,39 @@ const menuData: MenuDataItem[] = [
         heading: "Interiors",
         submenu: [
           {
-            label: "Lorem ipsum dolor sit amet consectetur",
-            href: "#",
+            label: "Living Room",
+            href: "/interiors-faculty",
           },
-          { label: "Ipsam sequi provident", href: "#" },
-          { label: "Porro impedit exercitationem", href: "#" },
+          { label: "Bed Room", href: "/interiors-faculty" },
         ],
       },
       {
         heading: "Interiors",
         submenu: [
-          { label: "Excepturi corporis atque libero", href: "#" },
+          { label: "Kitchen Residences", href: "/interiors-faculty" },
           {
-            label: "Ratione recusandae incidunt atque libero",
-            href: "#",
+            label: "Kitchen Commercial",
+            href: "/interiors-faculty",
           },
           {
-            label: "Excepturi corporis atque libero",
-            href: "#",
+            label: "Store Room",
+            href: "/interiors-faculty",
           },
+        
         ],
       },
       {
         heading: "Interiors",
         submenu: [
           {
-            label: "Exercitationem corporis a voluptas at atque libero",
-            href: "#",
+            label: "Corporate Office",
+            href: "/interiors-faculty",
           },
-          { label: "Provident, odio obcaecati", href: "#" },
+          { label: "Office Reception", href: "/interiors-faculty" },
           {
-            label: "Porro impedit corporis atque libero dolor impedit corporis",
-            href: "#",
+            label: "Supper Shop",
+            href: "/interiors-faculty",
           },
-        ],
-      },
-      {
-        heading: "Interiors",
-        submenu: [
-          { label: "Corporis consequatur consectetur", href: "#" },
-          {
-            label: "Accusamus vero beatae dolor impedit corporis",
-            href: "#",
-          },
-          { label: "Ab corrupti deserunt laborum", href: "#" },
         ],
       },
     ],
@@ -85,46 +74,44 @@ const menuData: MenuDataItem[] = [
     href: "/construction-faculty",
     nestedMenu: [
       {
-        heading: "Design Ideas",
+        heading: "Construction",
         submenu: [
-          { label: "Lorem ipsum dolor sit consectetur", href: "#" },
+          { label: "Village House", href: "/construction-faculty" },
           {
-            label: "Ratione recusandae incidunt dolor impedit corporis",
-            href: "#",
+            label: "Simplex House",
+            href: "/construction-faculty",
           },
-          { label: "Accusamus vero beatae dolor", href: "#" },
+          { label: "Duplex House", href: "/construction-faculty" },
         ],
       },
       {
-        heading: "Design Ideas",
+        heading: "Construction",
         submenu: [
-          { label: "Excepturi sapiente sequi", href: "#" },
+          { label: "Multi Storied House", href: "/construction-faculty" },
           {
-            label: "Ratione recusandae dolor impedit corporis",
-            href: "#",
+            label: "Resort",
+            href: "/construction-faculty",
           },
-          { label: "Dolor sit consectetur dolor impedit", href: "#" },
-          { label: "Repellat corporis excepturi", href: "#" },
-          { label: "Corporis consequatur", href: "#" },
+          { label: "Hotel House", href: "/construction-faculty" },
+        
         ],
       },
       {
-        heading: "Design Ideas",
+        heading: "Construction",
         submenu: [
-          { label: "Lorem ipsum dolor sit consectetur", href: "#" },
-          { label: "Repellat corporis excepturi?", href: "#" },
-          {
-            label: "Dolor sit consectetur dolor impedit corporis",
-            href: "#",
-          },
-          { label: "Ratione recusandae", href: "#" },
+          { label: "Bulding Ranovation", href: "/construction-faculty" },
+          { label: "Bulding Ranovation", href: "/construction-faculty" },
         ],
       },
     ],
   },
  
+  { label: "Furniture-Faculty", href: "#" },
+
 
   { label: "FPL Updates", href: "/others-faculty" },
+
+  { label: "Why FPL", href: "/why-fpl" },
 
   { label: "About Us", href: "/about-us" },
   { label: "Blogs", href: "/blogs" },

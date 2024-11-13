@@ -36,9 +36,9 @@ const HotelHouse: React.FC = () => {
             <SubHeading className="text-center text-gray-600 font-bold uppercase">
               Hotel House
             </SubHeading>
-            <Paragraph className="text-center py-5 w-full md:w-[500px] flex mx-auto">
-              You can choise your dream house from here. we can bulid your dream
-              house at minimun cost
+            <Paragraph className="text-center py-5 w-full md:w-[80%] flex mx-auto">
+              
+The Hotel House offers a blend of comfort and luxury, providing spacious rooms and exceptional service in a welcoming environment, perfect for both business and leisure travelers looking for a memorable stay.
             </Paragraph>
           </div>
         </div>

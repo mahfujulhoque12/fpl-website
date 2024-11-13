@@ -33,9 +33,8 @@ const LivingRoom: React.FC = () => {
         <SubHeading className="text-center text-gray-600 font-bold uppercase">
           Living Room
         </SubHeading>
-        <Paragraph className="text-center py-5 w-full md:w-[500px] flex mx-auto">
-          You can choose your favorite room from here. We can build your dream
-          room at a minimum cost.
+        <Paragraph className="text-center py-5 w-full md:w-[80%] flex mx-auto">
+      The Living Room is a versatile space designed to bring people together, combining comfort, style, and functionality to create the perfect setting for relaxation, conversation, and entertainment.
         </Paragraph>
         <Carousel>
           <CarouselContent>

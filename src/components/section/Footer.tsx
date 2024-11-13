@@ -82,13 +82,14 @@ const Footer: React.FC = () => {
               <h5 className="mb-3 text-lg font-bold text-gray-100">Contact Us</h5>
               <ul className="space-y-2">
                 <li className="flex gap-2 items-center text-gray-100 ">
-                   <FaSquarePhone size={25}  className="text-normal"/> +00875122
+                   <FaSquarePhone size={25}  className="text-normal"/> 01896-088860
                 </li>
                 <li className="flex gap-2 items-center text-gray-100 text-normal">
-                  <MdEmail size={25}  className="text-gray-100" /> support@gmail.com
+                  <MdEmail size={25}  className="text-gray-100" />info.yourfpl@gmail.com
                 </li>
-                <li className="flex gap-2 items-center text-normal text-gray-100">
-               <FaLocationDot size={25}  className="text-gray-100"/>  Bonani, Block-E, Road-4
+                <li className="flex ms-1 gap-2 items-start text-normal text-gray-100">
+               <FaLocationDot size={30}  className="text-gray-100"/>  
+               House # 29 (8th Floor), Block - A, Aftabnaga Main Road, Dhaka - 1219.
                 </li>
               </ul>
             </div>
@@ -99,9 +100,10 @@ const Footer: React.FC = () => {
         <MaxWidthWrapper>
           <div className="flex flex-col gap-3 md:flex-row justify-between">
             <div>
-              <p className="mb-0">
-                &copy; 2024 Livspace.com All Rights Reserved
-              </p>
+            <p className="mb-0">
+              &copy; {new Date().getFullYear()} yourfpl.com All Rights Reserved
+            </p>
+
             </div>
             <div>
               <p className="mb-0">

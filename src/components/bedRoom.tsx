@@ -36,9 +36,8 @@ const BedRoom = () => {
         <SubHeading className="text-center text-gray-600 font-bold uppercase">
           Bed Room
         </SubHeading>
-        <Paragraph className="text-center py-5 w-full md:w-[500px] flex mx-auto">
-          You can choise your favourit room from here. we can bulid your dream
-          room at minimun cost
+        <Paragraph className="text-center py-5 w-full md:w-[80%] flex mx-auto">
+        The Bedroom is a personal retreat designed for rest and relaxation, offering a tranquil environment that blends comfort, style, and serenity for a peaceful night &apos;s sleep.
         </Paragraph>
         <Carousel>
           <CarouselContent>

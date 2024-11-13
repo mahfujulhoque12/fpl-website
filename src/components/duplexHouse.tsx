@@ -36,9 +36,8 @@ const DuplexHouse: React.FC = () => {
             <SubHeading className="text-center text-gray-600 font-bold uppercase">
               Duplex House
             </SubHeading>
-            <Paragraph className="text-center py-5 w-full md:w-[500px] flex mx-auto">
-              You can choise your dream house from here. we can bulid your dream
-              house at minimun cost{" "}
+            <Paragraph className="text-center py-5 w-full md:w-[80%] flex mx-auto">
+            The Duplex House is a modern and spacious two-story home designed to offer separate living spaces with seamless functionality, providing the perfect balance of privacy and connectivity for families.
             </Paragraph>
           </div>
         </div>

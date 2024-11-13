@@ -35,9 +35,9 @@ const VillageHouse = () => {
         <SubHeading className="text-center text-gray-600 font-bold uppercase">
           Village House
         </SubHeading>
-        <Paragraph className="text-center py-4 w-full md:w-[500px] flex mx-auto">
-          You can choise your dream house from here. we can bulid your dream
-          house at minimun cost
+        <Paragraph className="text-center py-4 w-full md:w-[80%] flex mx-auto">
+        
+The Village House is a charming and tranquil home nestled in the heart of the countryside, offering a cozy retreat that combines rustic charm with modern comfort for a peaceful living experience.
         </Paragraph>
         <Carousel>
           <CarouselContent>
