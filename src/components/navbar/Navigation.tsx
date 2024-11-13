@@ -10,56 +10,68 @@ import MobileNavigationDrawer from "@/components/navbar/MobileNavigationDrawer";
 import Image from "next/image";
 
 interface MobileMenuOpeningPosition {
-  mobileMenuPos?: "left" | "right" | "top" | "bottom"; // Make it optional
+  mobileMenuPos?: "left" | "right" | "top" | "bottom";
 }
+
 const Navigation = ({ mobileMenuPos = "left" }: MobileMenuOpeningPosition) => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
-
   const drawerButtonRef = useRef(null);
 
   return (
-    <header className="sticky top-0 lef-0 z-50 h-[60px] bg-white border-b border-[#cacaca]">
-      <MaxWidthWrapper>
-        <div className="flex items-center justify-between gap-4 h-[60px]">
-         <div className="flex  gap-5 p-3">
-         <button
+    <header className="sticky top-0 left-0 z-50 h-[60px] bg-white border-b border-[#cacaca]">
+      <div className="flex items-center justify-between h-[60px] px-4">
+        {/* Left side: Hamburger button and mobile logo */}
+        <div className="flex items-center gap-3">
+          <button
             ref={drawerButtonRef}
-            className="border-none h-[45px] w-[45] -ml-3 bg-transparent md:hidden"
+            className="border-none h-[45px] w-[45px] bg-transparent md:hidden"
             aria-haspopup="true"
             onClick={() => setIsDrawerOpen(true)}
           >
-            {/* Mobile Hamburger menu */}
             <AlignJustify />
-          
-
           </button>
-          <Link href="/">
-          <Image src={mobileLogo} alt="" width={40} height={30} className="h-[30px] w-[30px] md:hidden mt-2"/>
+          <Link href="/" className="md:hidden">
+            <Image
+              src={mobileLogo}
+              alt="logo"
+              width={40}
+              height={30}
+              className="h-[30px] w-[30px]"
+            />
           </Link>
-         </div>
+        </div>
 
-          <Link  href="/">
-            <Image src={mobileLogo} alt="logo" width={50} height={50} className="hidden md:block  h-auto object-cover" />
-          </Link>
+        {/* Center: Main logo (visible on desktop only) */}
+        <Link href="/" className="hidden md:block">
+          <Image
+            src={mobileLogo}
+            alt="logo"
+            width={50}
+            height={50}
+            className="h-[40px] w-auto object-cover"
+          />
+        </Link>
 
+        {/* Right side: MegaMenu and UserProfile */}
+        <div className="flex items-center gap-3">
           <div className="hidden lg:block">
             <MegaMenu />
           </div>
           <UserProfile />
-
-          {/* Mobile navigation drawer */}
-          <div className="lg:hidden absolute">
-            <MobileNavigationDrawer
-              {...{
-                isDrawerOpen,
-                setIsDrawerOpen,
-                drawerButtonRef,
-                mobileMenuPos,
-              }}
-            />
-          </div>
         </div>
-      </MaxWidthWrapper>
+
+        {/* Mobile navigation drawer */}
+        <div className="lg:hidden absolute">
+          <MobileNavigationDrawer
+            {...{
+              isDrawerOpen,
+              setIsDrawerOpen,
+              drawerButtonRef,
+              mobileMenuPos,
+            }}
+          />
+        </div>
+      </div>
     </header>
   );
 };
