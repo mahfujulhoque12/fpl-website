@@ -1,7 +1,6 @@
 "use client";
 import { useState, useRef } from "react";
 import Link from "next/link";
-import MaxWidthWrapper from "@/components/layout/MaxWidthWrapper";
 import mobileLogo from "/public/fbl-logo.png";
 import UserProfile from "./UserProfile";
 import { AlignJustify } from "lucide-react";
@@ -20,7 +19,6 @@ const Navigation = ({ mobileMenuPos = "left" }: MobileMenuOpeningPosition) => {
   return (
     <header className="sticky top-0 left-0 z-50 h-[60px] bg-white border-b border-[#cacaca]">
       <div className="flex items-center justify-between h-[60px] px-4">
-        {/* Left side: Hamburger button and mobile logo */}
         <div className="flex items-center gap-3">
           <button
             ref={drawerButtonRef}
