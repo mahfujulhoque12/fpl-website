@@ -23,27 +23,27 @@ const cardData: CardData[] = [
   {
     id: 1,
     imageUrl: "/review/review1.png",
-    des: "I recently purchased a sofa from [Furniture Store Name], and I'm beyond impressed with both the product and the service! The quality of the furniture is exceptional, and it perfectly complements my living room décor. The materials feel durable and luxurious, and the craftsmanship is top-notch.",
+    des: "Incredible service and stunning design! They truly listened to our needs and created a beautiful space that feels like home. Highly recommended for anyone looking for professional, high-quality architecture in Bangladesh!.",
   },
   {
     id: 2,
     imageUrl: "/review/review2.png",
-    des: "I recently purchased a sofa from [Furniture Store Name], and I'm beyond impressed with both the product and the service! The quality of the furniture is exceptional, and it perfectly complements my living room décor. The materials feel durable and luxurious, and the craftsmanship is top-notch.",
+    des: "Working with them was a fantastic experience from start to finish. Their team is creative, punctual, and truly understands what it takes to make a dream home come alive. Thank you for making our vision a reality!",
   },
   {
     id: 3,
     imageUrl: "/review/review3.png",
-    des: "I recently purchased a sofa from [Furniture Store Name], and I'm beyond impressed with both the product and the service! The quality of the furniture is exceptional, and it perfectly complements my living room décor. The materials feel durable and luxurious, and the craftsmanship is top-notch.",
+    des: "Excellent craftsmanship and professional service. From the initial consultation to the final handover, every step was handled with care and expertise. I,d highly recommend them for any architectural project in Bangladesh",
   },
   {
     id: 4,
     imageUrl: "/review/review4.png",
-    des: "I recently purchased a sofa from [Furniture Store Name], and I'm beyond impressed with both the product and the service! The quality of the furniture is exceptional, and it perfectly complements my living room décor. The materials feel durable and luxurious, and the craftsmanship is top-notch.",
+    des: "The attention to detail and dedication from the team exceeded our expectations. They transformed our space into something functional and elegant—perfect for our family. We couldn't be happier with the results!",
   },
   {
     id: 5,
     imageUrl: "/review/review5.png",
-    des: "I recently purchased a sofa from [Furniture Store Name], and I'm beyond impressed with both the product and the service! The quality of the furniture is exceptional, and it perfectly complements my living room décor. The materials feel durable and luxurious, and the craftsmanship is top-notch.",
+    des: "They turned our ideas into a beautifully designed space that we are proud to call home. Their commitment to quality and customer satisfaction is truly commendable. If you’re looking for top-notch architectural services in Bangladesh, look no further!",
   },
 ];
 

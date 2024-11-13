@@ -32,16 +32,16 @@ const BoundaryRenovation: React.FC = () => {
   );
 
   return (
-    <section className="py-10 md:py-15">
+    <section className="py-10">
       <MaxWidthWrapper>
         <div className="">
           <div className="mb-4 sm:mb-0">
             <SubHeading className="text-center text-gray-600 font-bold uppercase">
               Boundary Renovation
             </SubHeading>
-            <Paragraph className="text-center py-5 w-full md:w-[500px] flex mx-auto">
-              You can choise your dream house from here. we can bulid your dream
-              house at minimun cost{" "}
+            <Paragraph className="text-center py-5 w-full md:w-[80%] flex mx-auto">
+          
+Boundary Renovation involves upgrading and redesigning the exterior boundaries of a property, including fences, walls, and gates, to enhance privacy, security, and curb appeal.
             </Paragraph>
           </div>
         </div>

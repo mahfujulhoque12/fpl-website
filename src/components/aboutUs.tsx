@@ -23,16 +23,16 @@ const AboutUs = () => {
             </h3>
 
             <p className="text-normal text-gray-500 mt-3">
-              Contrary to popular belief, Lorem Ipsum is not simply random text.
-              It has roots in a piece of . classical Latin literature from 45
-              BC, making it over 2000 years old.
+              
+        
+At FPL, we are a team of architects in Bangladesh specializing in innovative, functional design for residential, commercial, and urban projects, delivering tailored solutions with attention to detail and a focus on quality and sustainability.
             </p>
             <div className="flex  justify-center md:justify-start w-full">
               <Link
                 href="/cotesion"
                 className=" gap-2 text-center  flex  bg-[#cf4045] px-4 py-1 mt-2 text-white rounded-md hover:bg-[#c13136] transition-all text-sm duration-150"
               >
-                Get More Info
+                Get In Touch
               </Link>
             </div>
           </div>

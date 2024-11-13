@@ -19,22 +19,22 @@ const slides: Slide[] = [
   {
     id: 1,
     imageUrl: "https://wallpapercave.com/wp/wp11265278.jpg",
-    title: "Home to be beautiful interiors",
-    description: "lorem ipsum dolor sit am lorem is tincidunt",
+    title: "Crafting Architectural Masterpieces for Modern Living",
+    description: "We design sophisticated, practical spaces tailored to modern lifestyles",
     action: "Book Free Consultation",
   },
   {
     id: 2,
     imageUrl: "https://wallpapercave.com/wp/wp11265359.jpg",
-    title: "Want to know how much your kitchen interiors will cost?",
-    description: "lorem ipsum dolor sit am lorem is tincidunt",
+    title: "Where Vision Meets Precision in Architecture",
+    description: "With precision and detail, we turn your vision into architectural reality.",
     action: "Calculate Now",
   },
   {
     id: 3,
     imageUrl: "https://wallpapercave.com/wp/wp11265342.jpg",
-    title: "Come say hi to beautiful interiors",
-    description: "lorem ipsum dolor sit am lorem is tincidunt",
+    title: "Designing Spaces that Define Lifestyle",
+    description: "Our designs reflect your lifestyle, adding personality to every space.",
     action: "Visit Us",
   },
 ];

@@ -34,9 +34,9 @@ const StoreRoom = () => {
           {" "}
           Store Room
         </SubHeading>
-        <Paragraph className="text-center py-5 w-full md:w-[500px] flex mx-auto">
-          You can choose your favourite store room from here. We can build your
-          dream room at a minimum cost.
+        <Paragraph className="text-center py-5 w-full md:w-[80%] flex mx-auto">
+          
+      The Store Room is a well-organized space designed to efficiently store supplies and inventory, ensuring easy access and optimal use of storage for all your needs.
         </Paragraph>
         <Carousel>
           <CarouselContent>

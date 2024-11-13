@@ -24,7 +24,7 @@ const CallToAction = () => {
           </SubHeading>
 
           <Paragraph className="text-white mt-4">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+          Discover a home that perfectly fits your vision and lifestyle. With our expertise in design and attention to detail, we bring your dream home to life effortlessly. Start your journey with us and see how close you are to your ideal living space
           </Paragraph>
           <div className="flex  justify-center mt-3 w-full">
           <button 

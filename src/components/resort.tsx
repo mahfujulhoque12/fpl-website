@@ -33,9 +33,9 @@ const Resort = () => {
         <SubHeading className="text-center text-gray-600 font-bold uppercase">
           Resort
         </SubHeading>
-        <Paragraph className="text-center py-5 w-full md:w-[500px] flex mx-auto">
-          You can choise your dream house from here. we can bulid your dream
-          house at minimun cost{" "}
+        <Paragraph className="text-center py-5 w-full md:w-[80%] flex mx-auto">
+         
+The Resort is a luxurious getaway designed to offer ultimate relaxation and rejuvenation, combining stunning natural beauty, world-class amenities, and exceptional service to create a memorable and tranquil escape from everyday life.
         </Paragraph>
         <Carousel>
           <CarouselContent>

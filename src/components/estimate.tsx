@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import es1 from "/public/fac1.png";
 import es2 from "/public/duplexhouse/duplex1.png";
-import es3 from "/public/bedroom/bed1.png";
+import es3 from "/public/facalty/furniture.png";
 import { motion, useAnimation } from "framer-motion";
 import SubHeading from "./typography/SubHeading";
 import Paragraph from "./typography/Paragraph";
@@ -22,23 +22,23 @@ const cardData: CardData[] = [
   {
     id: 1,
     title: "Interiors Faculty",
-    des: "Know the estimate price for your full home interiors",
+    des: "Know the estimated price for your full home interiors",
     imageUrl: es1.src,
     href: "/interiors-faculty",
   },
   {
     id: 2,
     title: "Construction Faculty",
-    des: "Know the estimate price for your full home interiors",
+    des: "Know the estimated price for your full construction interiors",
     imageUrl: es2.src,
     href: "/construction-faculty",
   },
   {
     id: 3,
     title: "Furniture Faculty",
-    des: "Know the estimate price for your full home interiors",
+    des: "Know the estimated price for your full furniture interiors",
     imageUrl: es3.src,
-    href: "/others-faculty",
+    href: "#",
   },
 ];
 

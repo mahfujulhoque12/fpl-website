@@ -22,27 +22,27 @@ const cardData: CardData[] = [
   {
     id: 1,
     imageUrl: "/family/family1.png",
-    des: "I recently purchased a sofa from [Furniture Store Name], and I'm beyond impressed with both the product and the service! The quality of the furniture is exceptional, and it perfectly complements my living room décor. The materials feel durable and luxurious, and the craftsmanship is top-notch.",
+    des: "The team at FPL truly exceeded our expectations. From the initial consultation to the final design, they were incredibly attentive to our needs and vision. Their creativity and attention to detail made our project a success. Highly recommend them for any architectural needs!",
   },
   {
     id: 2,
     imageUrl: "/family/family2.png",
-    des: "I recently purchased a sofa from [Furniture Store Name], and I'm beyond impressed with both the product and the service! The quality of the furniture is exceptional, and it perfectly complements my living room décor. The materials feel durable and luxurious, and the craftsmanship is top-notch.",
+    des: "We hired FPL for a renovation project, and the results were beyond amazing. They combined modern design with practical functionality to create the perfect space for our family. Their professionalism and timely delivery made the entire process smooth and stress-free.",
   },
   {
     id: 3,
     imageUrl: "/family/family3.png",
-    des: "I recently purchased a sofa from [Furniture Store Name], and I'm beyond impressed with both the product and the service! The quality of the furniture is exceptional, and it perfectly complements my living room décor. The materials feel durable and luxurious, and the craftsmanship is top-notch.",
+    des: "FPL is a fantastic architectural firm that brings innovation and a fresh perspective to every project. They really listened to our requirements and offered solutions that fit our budget and lifestyle. Their designs are unique, and the quality of work is outstanding",
   },
   {
     id: 4,
     imageUrl: "/family/family4.png",
-    des: "I recently purchased a sofa from [Furniture Store Name], and I'm beyond impressed with both the product and the service! The quality of the furniture is exceptional, and it perfectly complements my living room décor. The materials feel durable and luxurious, and the craftsmanship is top-notch.",
+    des: "I was thoroughly impressed with FPL professionalism and creativity. They provided a modern yet timeless design for our commercial space that not only maximized functionality but also enhanced the overall aesthetic. A pleasure to work with, and they delivered on time and within budget.",
   },
   {
     id: 5,
     imageUrl: "/family/family5.png",
-    des: "I recently purchased a sofa from [Furniture Store Name], and I'm beyond impressed with both the product and the service! The quality of the furniture is exceptional, and it perfectly complements my living room décor. The materials feel durable and luxurious, and the craftsmanship is top-notch.",
+    des: "Working with FPL was an absolute pleasure. The architects are highly skilled and knowledgeable, and they gave great attention to every detail of our new home. Their vision and commitment to excellence were evident from start to finish.",
   },
 ];
 

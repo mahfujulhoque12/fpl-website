@@ -33,12 +33,11 @@ const HouseRanovation = () => {
     <section className="py-10 md:py-15">
       <MaxWidthWrapper>
         <SubHeading className="text-center text-gray-600 font-bold uppercase">
-          {" "}
           Bulding Ranovation
         </SubHeading>
-        <Paragraph className="text-center py-5 w-full md:w-[500px] flex mx-auto">
-          You can choise your dream house from here. we can bulid your dream
-          house at minimun cost{" "}
+        <Paragraph className="text-center py-5 w-full md:w-[80%] flex mx-auto">
+          
+Building Renovation is the process of upgrading and transforming existing spaces to improve functionality, aesthetics, and value.
         </Paragraph>
         <Carousel>
           <CarouselContent>

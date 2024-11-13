@@ -34,9 +34,9 @@ const SimplexHouse = () => {
         <SubHeading className="text-center text-gray-600 font-bold uppercase">
           Simplex House
         </SubHeading>
-        <Paragraph className="text-center py-5 w-full md:w-[500px] flex mx-auto">
-          You can choise your dream house from here. we can bulid your dream
-          house at minimun cost{" "}
+        <Paragraph className="text-center py-5 w-full md:w-[80%] flex mx-auto">
+          
+Simplex House is a modern, minimalist home designed with clean lines and functional spaces, offering a serene living environment that emphasizes simplicity and comfort.
         </Paragraph>
         <Carousel>
           <CarouselContent>

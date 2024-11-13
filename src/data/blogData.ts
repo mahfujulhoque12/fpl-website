@@ -39,8 +39,8 @@ export const cardData: CardData[] = [
     slug: createSlug(
       "Exploring Kyoto's Hidden Temples: A Day Off the Beaten Path one"
     ),
-    title: "Exploring Kyoto's Hidden Temples: A Day Off the Beaten Path one",
-    des: "Welcome to Kyoto! Beyond the famous shrines and temples, there are secret spots that locals treasure—hidden temples nestled in nature, away from the bustling crowds. Join me on a journey to uncover some of these magical places, perfect for anyone looking for a more serene and meditative Kyoto experience",
+    title: "How Sustainable Architecture is Changing the Building Industry",
+    des: "Sustainable architecture is transforming the building industry by emphasizing eco-friendly design, energy efficiency, and the use of renewable materials. Architects are increasingly incorporating green roofs, solar panels, and efficient systems to reduce environmental impact, while promoting the use of recyclable materials and designs that lower operational costs and support long-term sustainability",
     clinetImg: blogClinet.src,
     name: "arlene Robertson",
     min: ". 5 min",
@@ -77,8 +77,8 @@ export const cardData: CardData[] = [
     slug: createSlug(
       "Exploring Kyoto's Hidden Temples: A Day Off the Beaten Path tow"
     ),
-    title: "Exploring Kyoto's Hidden Temples: A Day Off the Beaten Path two",
-    des: "Welcome to Kyoto! Beyond the famous shrines and temples, there are secret spots that locals treasure—hidden temples nestled in nature, away from the bustling crowds. Join me on a journey to uncover some of these magical places, perfect for anyone looking for a more serene and meditative Kyoto experience",
+    title: "Building a Sustainable Future: Green Architecture Solutions",
+    des: "Building a sustainable future through green architecture focuses on designing buildings that minimize environmental impact while maximizing energy efficiency. By incorporating renewable materials, energy-saving technologies, and eco-friendly systems like solar panels and rainwater harvesting, green architecture aims to create healthier living spaces that conserve resources and reduce carbon footprints, paving the way for a more sustainable and resilient built environment.",
     clinetImg: blogClinet.src,
     name: "arlene Robertson",
     min: ". 7 min",
@@ -115,8 +115,8 @@ export const cardData: CardData[] = [
     slug: createSlug(
       "Exploring Kyoto's Hidden Temples: A Day Off the Beaten Path three"
     ),
-    title: "Exploring Kyoto's Hidden Temples: A Day Off the Beaten Path three",
-    des: "Welcome to Kyoto! Beyond the famous shrines and temples, there are secret spots that locals treasure—hidden temples nestled in nature, away from the bustling crowds. Join me on a journey to uncover some of these magical places, perfect for anyone looking for a more serene and meditative Kyoto experience",
+    title: "From Concept to Completion: The Journey of a Building Project",
+    des: "The journey of a building project starts with conceptualizing the design, followed by planning, budgeting, and obtaining permits. Construction then begins, with ongoing inspections to ensure quality and compliance. Finally, the project is completed, checked, and handed over, turning the initial vision into a fully realized, functional space.",
     clinetImg: blogClinet.src,
     name: "arlene Robertson",
     min: ". 5 min",
@@ -153,8 +153,8 @@ export const cardData: CardData[] = [
     slug: createSlug(
       "Exploring Kyoto's Hidden Temples: A Day Off the Beaten Path four"
     ),
-    title: "Exploring Kyoto's Hidden Temples: A Day Off the Beaten Path four",
-    des: "Welcome to Kyoto! Beyond the famous shrines and temples, there are secret spots that locals treasure—hidden temples nestled in nature, away from the bustling crowds. Join me on a journey to uncover some of these magical places, perfect for anyone looking for a more serene and meditative Kyoto experience",
+    title: "Maximizing Space: Innovative Ideas for Small Apartments",
+    des: "Maximizing space in small apartments requires creative design solutions that optimize functionality without compromising on style. By using multi-functional furniture, built-in storage, and open layouts, homeowners can make the most of limited space. Additionally, incorporating light colors, mirrors, and vertical storage can make rooms appear larger, while smart organization systems help reduce clutter, creating a more spacious and comfortable living environment.",
     clinetImg: blogClinet.src,
     name: "arlene Robertson",
     min: ". 8 min",
@@ -191,8 +191,8 @@ export const cardData: CardData[] = [
     slug: createSlug(
       "Exploring Kyoto's Hidden Temples: A Day Off the Beaten Path five"
     ),
-    title: "Exploring Kyoto's Hidden Temples: A Day Off the Beaten Path",
-    des: "Welcome to Kyoto! Beyond the famous shrines and temples, there are secret spots that locals treasure—hidden temples nestled in nature, away from the bustling crowds. Join me on a journey to uncover some of these magical places, perfect for anyone looking for a more serene and meditative Kyoto experience",
+    title: "The Role of Technology in Modern Architecture",
+    des: "Technology plays a crucial role in modern architecture by enabling innovative design solutions and improving construction efficiency. Advanced software like Building Information Modeling (BIM) allows architects to visualize and modify designs in real-time, while sustainable technologies such as solar panels, smart lighting, and energy-efficient materials contribute to eco-friendly buildings. Additionally, automation and smart home systems enhance the functionality and comfort of modern spaces, creating homes and commercial buildings that are more efficient, adaptable, and connected.",
     clinetImg: blogClinet.src,
     name: "arlene Robertson",
     min: ". 5 min",
@@ -229,8 +229,8 @@ export const cardData: CardData[] = [
     slug: createSlug(
       "Exploring Kyoto's Hidden Temples: A Day Off the Beaten Path six"
     ),
-    title: "Exploring Kyoto's Hidden Temples: A Day Off the Beaten Path",
-    des: "Welcome to Kyoto! Beyond the famous shrines and temples, there are secret spots that locals treasure—hidden temples nestled in nature, away from the bustling crowds. Join me on a journey to uncover some of these magical places, perfect for anyone looking for a more serene and meditative Kyoto experience",
+    title: "Exploring the Beauty of Modern Minimalist Architecture",
+    des: "Modern minimalist architecture focuses on simplicity, clean lines, and open spaces, creating a sense of calm and elegance. By emphasizing functionality and reducing unnecessary details, this design style uses neutral colors, natural materials, and a clutter-free approach to create a serene and timeless environment. The beauty of minimalist architecture lies in its ability to create visually stunning spaces that highlight form, light, and texture, offering a peaceful and harmonious living experience.",
     clinetImg: blogClinet.src,
     name: "arlene Robertson",
     min: ". 3 min",
@@ -265,10 +265,10 @@ export const cardData: CardData[] = [
     imageUrl: blog7.src,
     date: "January 6 , 2024",
     slug: createSlug(
-      "Exploring Kyoto's Hidden Temples: A Day Off the Beaten Path seven"
+      "How to Choose the Right Architect for Your Next Project"
     ),
-    title: "Exploring Kyoto's Hidden Temples: A Day Off the Beaten Path",
-    des: "Welcome to Kyoto! Beyond the famous shrines and temples, there are secret spots that locals treasure—hidden temples nestled in nature, away from the bustling crowds. Join me on a journey to uncover some of these magical places, perfect for anyone looking for a more serene and meditative Kyoto experience",
+    title: "How Architecture Affects Mental Health and Well-Being",
+    des: "Architecture greatly affects mental health by influencing mood and well-being. Thoughtful design, such as natural light, open spaces, and calming materials, can reduce stress and promote relaxation, while poorly designed environments can contribute to discomfort and anxiety.",
     clinetImg: blogClinet.src,
     name: "arlene Robertson",
     min: ". 5 min",
@@ -303,10 +303,10 @@ export const cardData: CardData[] = [
     imageUrl: blog8.src,
     date: "January 6 , 2024",
     slug: createSlug(
-      "Exploring Kyoto's Hidden Temples: A Day Off the Beaten Path eight"
+      "Why Good Design Matters: The Impact of Architecture on Daily Life"
     ),
-    title: "Exploring Kyoto's Hidden Temples: A Day Off the Beaten Path",
-    des: "Welcome to Kyoto! Beyond the famous shrines and temples, there are secret spots that locals treasure—hidden temples nestled in nature, away from the bustling crowds. Join me on a journey to uncover some of these magical places, perfect for anyone looking for a more serene and meditative Kyoto experience",
+    title: "Why Good Design Matters: The Impact of Architecture on Daily Life",
+    des: "Good design in architecture plays a vital role in enhancing daily life by creating functional, comfortable, and aesthetically pleasing spaces. Well-designed buildings improve productivity, foster well-being, and provide a sense of safety and connection, while also reflecting cultural values and personal identity. The impact of architecture extends beyond aesthetics, shaping how we live, work, and interact within our environments.",
     clinetImg: blogClinet.src,
     name: "arlene Robertson",
     min: ". 7 min",
@@ -343,8 +343,8 @@ export const cardData: CardData[] = [
     slug: createSlug(
       "Exploring Kyoto's Hidden Temples: A Day Off the Beaten Path nine"
     ),
-    title: "Exploring Kyoto's Hidden Temples: A Day Off the Beaten Path",
-    des: "Welcome to Kyoto! Beyond the famous shrines and temples, there are secret spots that locals treasure—hidden temples nestled in nature, away from the bustling crowds. Join me on a journey to uncover some of these magical places, perfect for anyone looking for a more serene and meditative Kyoto experience",
+    title: "Transforming Small Spaces: Creative Solutions for Urban Living",
+    des: "Transforming small spaces in urban living requires creative design solutions that maximize functionality without sacrificing style. Using multi-purpose furniture, smart storage, and open floor plans, small apartments can feel spacious and organized. Incorporating vertical storage, light colors, and mirrors can further enhance the sense of space, while efficient layouts create a comfortable and functional living environment in even the most compact areas.",
     clinetImg: blogClinet.src,
     name: "arlene Robertson",
     min: ". 5 min",
@@ -381,8 +381,8 @@ export const cardData: CardData[] = [
     slug: createSlug(
       "Exploring Kyoto's Hidden Temples: A Day Off the Beaten Path ten"
     ),
-    title: "Exploring Kyoto's Hidden Temples: A Day Off the Beaten Path",
-    des: "Welcome to Kyoto! Beyond the famous shrines and temples, there are secret spots that locals treasure—hidden temples nestled in nature, away from the bustling crowds. Join me on a journey to uncover some of these magical places, perfect for anyone looking for a more serene and meditative Kyoto experience",
+    title: "How Sustainable Architecture is Changing the Building Industry",
+    des: "Sustainable architecture is transforming the building industry by prioritizing eco-friendly design, energy efficiency, and the use of renewable materials. Architects are integrating green technologies like solar panels, energy-efficient systems, and sustainable building materials, reducing a building's carbon footprint and operating costs. This shift towards sustainability is not only helping to conserve resources but also promoting healthier, more environmentally conscious living spaces for the future.",
     clinetImg: blogClinet.src,
     name: "arlene Robertson",
     min: ". 8 min",
@@ -419,8 +419,8 @@ export const cardData: CardData[] = [
     slug: createSlug(
       "Exploring Kyoto's Hidden Temples: A Day Off the Beaten Path yelleven"
     ),
-    title: "Exploring Kyoto's Hidden Temples: A Day Off the Beaten Path",
-    des: "Welcome to Kyoto! Beyond the famous shrines and temples, there are secret spots that locals treasure—hidden temples nestled in nature, away from the bustling crowds. Join me on a journey to uncover some of these magical places, perfect for anyone looking for a more serene and meditative Kyoto experience",
+    title: "Creating Timeless Designs: The Art of Blending Modern and Traditional Styles",
+    des: "Creating timeless designs involves blending modern and traditional styles to achieve a harmonious balance between innovation and heritage. By combining contemporary elements like clean lines and open spaces with classic features such as intricate details, natural materials, and warm textures, designers create spaces that feel both fresh and enduring. This fusion honors the past while embracing the future, resulting in a design that remains relevant and appealing across generations.",
     clinetImg: blogClinet.src,
     name: "arlene Robertson",
     min: ". 5 min",
@@ -457,8 +457,8 @@ export const cardData: CardData[] = [
     slug: createSlug(
       "Exploring Kyoto's Hidden Temples: A Day Off the Beaten Path twlbe"
     ),
-    title: "Exploring Kyoto's Hidden Temples: A Day Off the Beaten Path",
-    des: "Welcome to Kyoto! Beyond the famous shrines and temples, there are secret spots that locals treasure—hidden temples nestled in nature, away from the bustling crowds. Join me on a journey to uncover some of these magical places, perfect for anyone looking for a more serene and meditative Kyoto experience",
+    title: "Why Every Home Needs Thoughtful, Customized Design",
+    des: "Every home needs thoughtful, customized design to reflect its occupants' unique needs, preferences, and lifestyle. Tailored design solutions create functional, comfortable spaces that enhance daily living, improve efficiency, and foster a sense of belonging. By considering aspects like layout, lighting, and storage, customized design ensures that a home is not only aesthetically pleasing but also practical and well-suited to its inhabitants.",
     clinetImg: blogClinet.src,
     name: "arlene Robertson",
     min: ". 3 min",
@@ -495,8 +495,8 @@ export const cardData: CardData[] = [
     slug: createSlug(
       "Exploring Kyoto's Hidden Temples: A Day Off the Beaten Path tirteen"
     ),
-    title: "Exploring Kyoto's Hidden Temples: A Day Off the Beaten Path",
-    des: "Welcome to Kyoto! Beyond the famous shrines and temples, there are secret spots that locals treasure—hidden temples nestled in nature, away from the bustling crowds. Join me on a journey to uncover some of these magical places, perfect for anyone looking for a more serene and meditative Kyoto experience",
+    title: "Architectural Mistakes to Avoid in Your Next Project",
+    des: "To avoid common architectural mistakes, ensure proper planning, consider natural light and ventilation, choose durable materials, and create a cohesive design that meets the needs of the occupants. Failing to do so can lead to inefficiencies and a lack of harmony in your project.",
     clinetImg: blogClinet.src,
     name: "arlene Robertson",
     min: ". 3 min",
@@ -533,8 +533,8 @@ export const cardData: CardData[] = [
     slug: createSlug(
       "Exploring Kyoto's Hidden Temples: A Day Off the Beaten Path fourteen"
     ),
-    title: "Exploring Kyoto's Hidden Temples: A Day Off the Beaten Path",
-    des: "Welcome to Kyoto! Beyond the famous shrines and temples, there are secret spots that locals treasure—hidden temples nestled in nature, away from the bustling crowds. Join me on a journey to uncover some of these magical places, perfect for anyone looking for a more serene and meditative Kyoto experience",
+    title: "How Architecture Can Improve Your Quality of Life",
+    des: "Architecture can significantly improve your quality of life by creating functional, comfortable, and aesthetically pleasing spaces that enhance daily living. Thoughtful design promotes well-being through natural light, efficient layouts, and mindful use of materials, fostering a sense of tranquility, productivity, and connection within the environment.",
     clinetImg: blogClinet.src,
     name: "arlene Robertson",
     min: ". 3 min",
@@ -571,8 +571,8 @@ export const cardData: CardData[] = [
     slug: createSlug(
       "Exploring Kyoto's Hidden Temples: A Day Off the Beaten Path fiveteen"
     ),
-    title: "Exploring Kyoto's Hidden Temples: A Day Off the Beaten Path",
-    des: "Welcome to Kyoto! Beyond the famous shrines and temples, there are secret spots that locals treasure—hidden temples nestled in nature, away from the bustling crowds. Join me on a journey to uncover some of these magical places, perfect for anyone looking for a more serene and meditative Kyoto experience",
+    title: "The Importance of Functionality in Architectural Design",
+    des: "Functionality in architectural design is crucial as it ensures that spaces are practical, efficient, and tailored to the needs of the people who use them. A well-designed building balances aesthetics with usability, optimizing layouts, flow, and accessibility to enhance daily life while maintaining a comfortable and organized environment.",
     clinetImg: blogClinet.src,
     name: "arlene Robertson",
     min: ". 3 min",
@@ -609,8 +609,8 @@ export const cardData: CardData[] = [
     slug: createSlug(
       "Exploring Kyoto's Hidden Temples: A Day Off the Beaten Path sixteen"
     ),
-    title: "Exploring Kyoto's Hidden Temples: A Day Off the Beaten Path",
-    des: "Welcome to Kyoto! Beyond the famous shrines and temples, there are secret spots that locals treasure—hidden temples nestled in nature, away from the bustling crowds. Join me on a journey to uncover some of these magical places, perfect for anyone looking for a more serene and meditative Kyoto experience",
+    title: "Designing for Comfort: Balancing Aesthetics and Functionality",
+    des: "Designing for comfort involves balancing aesthetics with functionality to create spaces that are both visually appealing and practical. Thoughtful design considers the layout, materials, and lighting to ensure a comfortable atmosphere, while also addressing the specific needs of the occupants, resulting in a space that feels welcoming, efficient, and easy to live in.",
     clinetImg: blogClinet.src,
     name: "arlene Robertson",
     min: ". 3 min",
@@ -647,8 +647,8 @@ export const cardData: CardData[] = [
     slug: createSlug(
       "Exploring Kyoto's Hidden Temples: A Day Off the Beaten Path seventeen"
     ),
-    title: "Exploring Kyoto's Hidden Temples: A Day Off the Beaten Path",
-    des: "Welcome to Kyoto! Beyond the famous shrines and temples, there are secret spots that locals treasure—hidden temples nestled in nature, away from the bustling crowds. Join me on a journey to uncover some of these magical places, perfect for anyone looking for a more serene and meditative Kyoto experience",
+    title: "How to Create a Seamless Indoor-Outdoor Living Experience",
+    des: "To create a seamless indoor-outdoor living experience, use large windows, sliding doors, and consistent materials that blend the interior with the exterior. Incorporating outdoor spaces like patios and gardens helps create a natural flow between both areas.",
     clinetImg: blogClinet.src,
     name: "arlene Robertson",
     min: ". 3 min",
@@ -685,8 +685,8 @@ export const cardData: CardData[] = [
     slug: createSlug(
       "Exploring Kyoto's Hidden Temples: A Day Off the Beaten Path 18"
     ),
-    title: "Exploring Kyoto's Hidden Temples: A Day Off the Beaten Path",
-    des: "Welcome to Kyoto! Beyond the famous shrines and temples, there are secret spots that locals treasure—hidden temples nestled in nature, away from the bustling crowds. Join me on a journey to uncover some of these magical places, perfect for anyone looking for a more serene and meditative Kyoto experience",
+    title: "The Evolution of Architecture: How Design Styles Have Changed Over Time",
+    des: "Architecture has evolved from ancient classical designs to modern minimalism, with each era introducing new materials, techniques, and aesthetic ideals. Today, the focus is on sustainability, technology, and personalized designs, shaping how we live and interact with spaces.",
     clinetImg: blogClinet.src,
     name: "arlene Robertson",
     min: ". 3 min",

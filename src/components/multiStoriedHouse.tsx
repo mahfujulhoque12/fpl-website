@@ -35,9 +35,8 @@ const MultiStoriedHouse = () => {
         <SubHeading className="text-center text-gray-600 font-bold uppercase">
           Multi Storied House
         </SubHeading>
-        <Paragraph className="text-center py-5 w-full md:w-[500px] flex mx-auto">
-          You can choise your dream house from here. we can bulid your dream
-          house at minimun cost
+        <Paragraph className="text-center py-5 w-full md:w-[80%] flex mx-auto">
+        The Multi-Storied House is a spacious and modern home spread across multiple levels, designed to offer expansive living spaces, privacy, and stunning views, making it perfect for families who value both comfort and luxury.
         </Paragraph>
         <Carousel>
           <CarouselContent>

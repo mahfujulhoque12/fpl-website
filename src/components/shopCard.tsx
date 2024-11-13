@@ -33,10 +33,10 @@ const ShopCard: React.FC = () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2  lg:grid-cols-3  gap-5 mt-5 mb-5 rounded-md">
           {cardData.map((card) => (
-            <button type="button" onClick={()=>handleMoreDetails(card.slug)}  key={card.slug}>
+            <div className="cursor-pointer" onClick={()=>handleMoreDetails(card.slug)}  key={card.slug}>
             <div
               
-              className="group shadow-md border hover:shadow-sm hover:scale-[102%] rounded-[5px] overflow-hidden transition-translate duration-500"
+              className="group h-full flex-grow shadow-md border hover:shadow-sm hover:scale-[102%] rounded-[5px] overflow-hidden transition-translate duration-500"
             >
               <div className="block">
                 <div className="relative w-full h-64">
@@ -55,7 +55,7 @@ const ShopCard: React.FC = () => {
                 </div>
               </div>
             </div>
-            </button>
+            </div>
             
           ))}
         </div>

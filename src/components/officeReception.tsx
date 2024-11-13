@@ -36,9 +36,8 @@ const OfficeReception = () => {
           {" "}
           Office Reception
         </SubHeading>
-        <Paragraph className="text-center py-5 w-full md:w-[500px] flex mx-auto">
-          You can choose your favourite room from here. We can build your dream
-          room at a minimum cost.
+        <Paragraph className="text-center py-5 w-full md:w-[80%] flex mx-auto">
+        Office Reception is a welcoming and organized space that sets the tone for your business, offering a professional first impression for clients and visitors.
         </Paragraph>
         <Carousel>
           <CarouselContent>
