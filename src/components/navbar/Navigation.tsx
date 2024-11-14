@@ -19,10 +19,10 @@ const Navigation = ({ mobileMenuPos = "left" }: MobileMenuOpeningPosition) => {
   return (
     <header className="sticky top-0 left-0 z-50 h-[60px] bg-white border-b border-[#cacaca]">
       <div className="flex items-center justify-between h-[60px] px-4">
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-3 md:hidden">
           <button
             ref={drawerButtonRef}
-            className="border-none h-[45px] w-[45px] bg-transparent md:hidden"
+            className="border-none h-[45px] w-[45px] bg-transparent"
             aria-haspopup="true"
             onClick={() => setIsDrawerOpen(true)}
           >
@@ -55,9 +55,9 @@ const Navigation = ({ mobileMenuPos = "left" }: MobileMenuOpeningPosition) => {
           <div className="hidden lg:block">
             <MegaMenu />
           </div>
-          <UserProfile />
+         
         </div>
-
+        <UserProfile />
         {/* Mobile navigation drawer */}
         <div className="lg:hidden absolute">
           <MobileNavigationDrawer
