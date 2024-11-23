@@ -1,14 +1,12 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React from "react";
 import MaxWidthWrapper from "@/components/layout/MaxWidthWrapper";
 import Image from "next/image";
-import logo1 from "/public/c1.png";
-import logo2 from "/public/c2.png";
-import logo3 from "/public/c3.png";
-import logo4 from "/public/c4.png";
-import logo5 from "/public/c5.png";
-import logo6 from "/public/c6.png";
-import logo7 from "/public/c7.png";
+import logo1 from "/public/partner/partner1.png";
+import logo2 from "/public/partner/partner2.png";
+import logo3 from "/public/partner/partner3.png";
+import logo4 from "/public/partner/partner4.png";
+
 import SubHeading from "./typography/SubHeading";
 
 type CardData = {
@@ -20,93 +18,58 @@ type CardData = {
 const cardData: CardData[] = [
   {
     id: 1,
-    title: "3 countries",
+    title: "Ability to invest BDT at 20-25 lakh",
     imageUrl: logo1.src,
   },
   {
     id: 2,
-    title: "Easy EMIs",
+    title: "In-depth understanding of the local market",
     imageUrl: logo2.src,
   },
   {
     id: 3,
-    title: "45-day move-in guarantee²",
+    title: "Ownership for lead generation and sales",
     imageUrl: logo3.src,
   },
   {
     id: 4,
-    title: "146 quality checks",
+    title: "Experience in managing studios and marketing",
     imageUrl: logo4.src,
-  },
-  {
-    id: 5,
-    title: "100,000+ happy homes",
-    imageUrl: logo5.src,
-  },
-  {
-    id: 6,
-    title: "60+ cities",
-    imageUrl: logo6.src,
-  },
-  {
-    id: 7,
-    title: "20 lakh+ catalogue products",
-    imageUrl: logo7.src,
   },
 ];
 
 const WhyChoseUs: React.FC = () => {
-  const visibleCount = 4;
-  const totalCards = cardData.length;
-  const [startIndex, setStartIndex] = useState(0);
-  const [exitingIndex, setExitingIndex] = useState<number | null>(null);
 
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      setExitingIndex(startIndex);
-      setStartIndex((prevIndex) => (prevIndex + 1) % totalCards);
-    }, 2000);
-
-    return () => clearInterval(intervalId);
-  }, [startIndex, totalCards]);
 
   return (
     <section className="py-10 md:py-15">
       <MaxWidthWrapper>
-        <SubHeading className="text-center  pb-10 text-gray-700">
-          Why Choose Us
+        <SubHeading className="text-center  pb-5 text-gray-700">
+        What does it take to become a FPL partner?
         </SubHeading>
-        <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
-          {Array.from({ length: visibleCount }).map((_, index) => {
-            const cardIndex = (startIndex + index) % totalCards;
-            const card = cardData[cardIndex];
-            return (
-              <div
-                className={`shadow-md py-3 border px-4 bg-white rounded-[5px] 
-                transition-transform duration-500 
-                ${
-                  exitingIndex ===
-                  (startIndex + index - 1 + totalCards) % totalCards
-                    ? "animate-exit"
-                    : "animate-enter"
-                }`}
-                key={card.id}
-                style={{ animationDelay: `${index * 0.2}s` }}
-              >
-                <div className="justify-center items-center flex">
-                  <Image
-                    src={card.imageUrl}
-                    alt={`logo-${card.id}`}
-                    width={80}
-                    height={80}
-                  />
-                </div>
-                <p className="text-center text-gray-500 mt-4 pb-5">
-                  {card.title}
-                </p>
-              </div>
-            );
-          })}
+        <p className="text-base font-medium text-gray-500 text-center">
+      The criteria are straightforward. If you feel you&apos;ve got the following qualities, you&apos;ve already qualified to be our partner.
+    </p>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 mt-8">
+         {cardData.map((card)=>(
+          <div
+          className="shadow-md py-3 border px-4 bg-white rounded-[5px]"
+          key={card.id}
+          >
+          <div className="justify-center items-center flex">
+            <Image
+              src={card.imageUrl}
+              alt={`logo-${card.id}`}
+              width={250}
+              height={250}
+            />
+          </div>
+          <p className="text-center text-gray-500 mt-4 pb-5">
+            {card.title}
+          </p>
+          </div>
+         ))}
         </div>
       </MaxWidthWrapper>
     </section>
@@ -114,3 +77,5 @@ const WhyChoseUs: React.FC = () => {
 };
 
 export default WhyChoseUs;
+
+
